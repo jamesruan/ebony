@@ -96,7 +96,7 @@
    -webkit-font-feature-settings: "kern" 1;
    -moz-font-feature-settings: "kern" 1;
    font-feature-settings: "kern" 1;
- 	font-size: 0.1666in;
+ 	font-size: 16px;
  	margin: 0;
  }
 /* ==========================================================================
@@ -173,7 +173,9 @@
  pre,
  samp {
  	background-color: @color-bg-lesser;
- 	font: 0.9em/1.2em "Lucida Console", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace, sans-serif;
+	font-size: 0.8rem;
+	line-height: 1.2rem;
+ 	font-family: "Lucida Console", "Droid Sans Mono", "Courier New", "Courier", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace, sans-serif;
  }
  code{
  	display: inline-block;
@@ -182,7 +184,9 @@
  {
  	display: inline;
  	padding: .1em .5em .1em .5em;
- 	font: 1em "Lucida Console", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace, sans-serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+ 	font-family: "Lucida Console", "Droid Sans Mono", "Courier New", "Courier", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace, sans-serif;
  	border: thin solid @color-border;
  	.border-radius(0.25em);
  }
@@ -627,7 +631,7 @@
  	.font-family-sans();
  	font-style: normal;
  	color: @color-front-normal;
- 	line-height: 125%;
+ 	line-height: 1em;
  	margin-top: 1.5em;
  	margin-bottom: .5em;
  }
@@ -686,6 +690,17 @@
  	color: @color-1st;
  	.transition(color linear 0.4s, background-color linear 0.4s;);
  }
+ a[href].new-window::after{
+	position: relative;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-weight: normal;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\e164";
+	padding-left: .5em;
+ }
  a:hover {
  	color: @color-anchor-hover;
  }
@@ -711,8 +726,8 @@
  blockquote,
  blockquote p {
  	color: @color-front-lesser;
- 	font-size: 0.9em;
- 	line-height: 1.8em;
+ 	font-size: 0.9rem;
+ 	line-height: 1.8rem;
  	.font-family-sans("Verdana");
  	position: relative;
  }
@@ -803,6 +818,26 @@
  	margin: 2em 0 2em;
  	height: 0;
  }
+article.row,
+article.row figure{
+	overflow: auto;
+}
+article.row img{
+	*zoom: 1;
+	max-height: 48vh;
+	max-width: 36vw;
+	height: auto;
+	width: auto;
+	display: block;
+	padding: .5em;
+	margin: auto;
+}
+article.row img.centered:after,
+article.row img.left:after,
+article.row img.right:after{
+	clear: both;
+}
+	
 /*
  * IVORY Framework - http://www.weice.in/ivory
  * Developed by Lakshmikanth Vallampati - kanth.vallampati@gmail.com
@@ -1039,7 +1074,6 @@
  	color: @color-front-lesser;
  	vertical-align: middle;
  	font-size: 0.8em;
- 	line-height: 1.2em;
  	position: relative;
  	padding: 5px 10px;
  }
@@ -1227,8 +1261,10 @@
  }
  /* ---- Table ---- */
  table {
- 	width: 100%;
  	.font-family-sans();
+ 	font-size: 0.8rem;
+ 	line-height: 1.2rem;
+ 	width: 100%;
  	border: solid 1px @color-border;
  	.border-radius(5px);
  }
@@ -1245,12 +1281,7 @@
  }
  th {
  	background-color: @color-form-span-bg;
- 	font-size: 0.8em;
- 	line-height: 1.2em;
  	text-align: center;
- }
- td {
- 	font-size: 0.8em;
  }
  table tr:first-child th:first-child {
  	-webkit-border-top-left-radius: 5px;
