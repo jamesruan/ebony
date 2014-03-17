@@ -7,8 +7,12 @@
 <link id="main_css" rel="stylesheet" type="text/css" href="stylesheets/main_ebony.css" media="all">
 <link id="index_css" rel="stylesheet" type="text/css" href="stylesheets/index_ebony.css" media="all">
 
-<script type="text/javascript" src="javascripts/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/highlight/build/highlight.pack.js"></script>
 <script type="text/javascript">
+$(document).ready(function() {
+    $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+    });
 function change_theme( theme ){
     $('#main_css').attr('href', "stylesheets/main_"+theme+".css");
     $('#index_css').attr('href', "stylesheets/index_"+theme+".css");
@@ -1078,6 +1082,24 @@ function change_theme( theme ){
                     laoreet mattis, massa. This is a blockquote text with class: pull-quote.
                 </blockquote>
                 <cite class="bq-cite">Lakshmikanth Vallampati</cite>
+            </div>
+        <hr>
+        <div class="row space-bot">
+            <div class="c12 first last">
+                <h5 class="text-center">CODE</h5>
+                <pre><code class="language-javascript">
+var map;
+function initialize() {
+      var mapOptions = {
+          zoom: 8,
+          center: new google.maps.LatLng(-34.397, 150.644)
+      };
+      map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+                </code></pre>
             </div>
         </div>
         <hr>

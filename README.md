@@ -8,7 +8,8 @@ It provides basic stylesheets for the new CC98.org front-end.
 
 Need node.js installed.
 
-	npm -g install less http-server
+	npm -g install less http-server bower
 
+Run 'bower install' to install dependencies.
 Run 'make' at stylesheets to generate *css* file from *less* file.
 
