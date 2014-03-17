@@ -1,7 +1,7 @@
 ebony
 =====
 
-EBONY is a responsive grid framework that derives from IVORY.
+  EBONY is a responsive grid framework that derives from IVORY.
 It provides basic stylesheets for the new CC98.org front-end.
 
 ----
