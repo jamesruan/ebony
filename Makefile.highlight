@@ -1,0 +1,8 @@
+all: build js styles
+
+build:
+	python tool/build.py
+js:
+	cp build/highlight.pack.js ../../javascripts/
+styles: 
+	cp -r src/styles ../../stylesheets/highlight
