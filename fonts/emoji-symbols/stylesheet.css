@@ -11,9 +11,11 @@ http://emojisymbols.com/
 	position: relative;
 	display: inline-block;
 	font-family: 'Emoji Symbols';
-	-webkit-font-smoothing: antialiased;
 	font-style: normal;
 	font-weight: normal;
+    font-size: 2em;
+    line-height: 1em;
+	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
