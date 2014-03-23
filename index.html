@@ -7,16 +7,12 @@
 <link id="main_css" rel="stylesheet" type="text/css" href="stylesheets/main_ebony.css" media="all">
 <link id="index_css" rel="stylesheet" type="text/css" href="stylesheets/index_ebony.css" media="all">
 
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/highlight/build/highlight.pack.js"></script>
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/highlight.pack.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
     });
-function change_theme( theme ){
-    $('#main_css').attr('href', "stylesheets/main_"+theme+".css");
-    $('#index_css').attr('href', "stylesheets/index_"+theme+".css");
-};
 </script>
 </head>
 <body style="">
@@ -25,10 +21,6 @@ function change_theme( theme ){
     <br>
     <span class="text-center" >
         <p><a href="http://weice.in/ivory/">Original Work</a></p>
-        <p>THEME: 
-        <a href="javascript:change_theme('ivory');">IVORY</a>
-        <a href="javascript:change_theme('ebony');">EBONY</a>
-        </p>
     </span>
 </div>
 <div class="content">
