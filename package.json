@@ -12,7 +12,7 @@
     "angular": "^1.2.15"
   },
   "scripts": {
-    "preinstall": "npm install -g less uglifyjs browserify",
+    "preinstall": "npm install -g less uglifyjs browserify http-server",
     "test": "http-server"
   },
   "repository": {

@@ -8,8 +8,16 @@ It provides basic stylesheets for the new CC98.org front-end.
 
 Need node.js installed.
 
-	npm -g install less http-server bower
+	npm install 
 
-Run 'bower install' to install dependencies.
-Run 'make' at stylesheets to generate *css* file from *less* file.
+then (if on linux)
 
+    make
+
+or you may need manually build EBONY
+
+use:
+
+    npm test
+
+to run a test server.
