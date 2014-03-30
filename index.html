@@ -5,12 +5,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link id="main_css" rel="stylesheet" type="text/css" href="stylesheets/main_ebony.css" media="all">
-<link id="index_css" rel="stylesheet" type="text/css" href="stylesheets/index_ebony.css" media="all">
+<link id="main_css" rel="stylesheet" href="stylesheets/main_ebony.css" media="all">
+<link id="index_css" rel="stylesheet" href="stylesheets/index_ebony.css" media="all">
 
-<script type="text/javascript" src="javascripts/jquery.min.js"></script>
-<script type="text/javascript" src="javascripts/highlight.pack.js"></script>
+<script type="text/javascript" src="javascripts/bundle.min.js"></script>
 <script type="text/javascript">
+$=require('jquery');
+hljs=require('highlight.js');
 $(document).ready(function() {
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
         $(".emoji_list").load("emoji.html");

@@ -1,0 +1,30 @@
+{
+  "name": "ebony",
+  "version": "0.0.0",
+  "description": "Ebony Framework",
+  "main": "index.html",
+  "dependencies": {
+    "highlight.js": "~8.0.0",
+    "jquery": "^2.1.0",
+    "pegjs": "^0.8.0",
+    "json-stringify-safe": "^5.0.0",
+    "jsml-jquery": "^0.1.0",
+    "angular": "^1.2.15"
+  },
+  "scripts": {
+    "preinstall": "npm install -g less uglifyjs browserify",
+    "test": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jamesruan/ebony"
+  },
+  "keywords": [
+    "framework"
+  ],
+  "author": "James Ruan",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/jamesruan/ebony/issues"
+  }
+}
