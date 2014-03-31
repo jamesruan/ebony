@@ -88,6 +88,7 @@ html {
     font-family: sans-serif; /* 1 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    font-size: 16px;
 }
 /**
  * Remove default margin.
@@ -96,7 +97,6 @@ body {
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
-    font-size: 16px;
     margin: 0;
 }
 /* ==========================================================================
@@ -137,6 +137,7 @@ h1 {
  */
 abbr[title] {
     border-bottom: 1px dashed;
+    letter-spacing: 0.1em;
 }
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
@@ -184,6 +185,7 @@ code.inline
 {
     display: inline;
     padding: .1em .25em .1em .25em;
+    margin: 0 .125em 0 .125em;
     font-size: 0.9em;
     line-height: 1.5em;
     font-family: "Lucida Console", "Droid Sans Mono", "Courier New", "Courier", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace, sans-serif;
@@ -634,6 +636,8 @@ h6 {
     line-height: 1em;
     margin-top: 1.5em;
     margin-bottom: .5em;
+    letter-spacing: .1em;
+    page-break-inside: never;
 }
 h1
 {
@@ -721,6 +725,8 @@ p {
     font-size: 1em;
     line-height: 2em;
     .font-family-sans();
+    widows: 3;
+    orphans: 3;
 }
 p span.caps {
     font-size: large;
@@ -750,15 +756,16 @@ blockquote.pull-quote:after {
     position: absolute;
     font-size: 150%;
     opacity: 30;
-    content: '"';
 }
 blockquote.pull-quote:before {
     top: 0;
     left: 0;
+    content: open-quote;
 }
 blockquote.pull-quote:after {
     bottom: 0;
     right: 0;
+    content: close-quote;
 }
 cite.bq-cite {
     padding-right: 0.5em;
@@ -785,7 +792,8 @@ sup {
 sub {
     bottom: -0.25em;
 }
-i {
+i,var
+{
     font-style: italic;
     line-height: inherit;
     padding-right: 0.2em;
@@ -871,10 +879,12 @@ dl {
     line-height: 2em;
     .font-family-sans();
     margin-bottom: 0.5em;
-    padding: 0px;
+    padding-left: 1em;
     list-style-position: inside;
-    text-indent: 5px;
     color: @color-front-lesser;
+}
+li:before{
+    text-align: right;
 }
 ul li ul,
 ul li ol {
@@ -901,7 +911,7 @@ ul.no-bullet li ul {
 }
 ol li ul,
 ol li ol {
-    margin-left: 1.5em;
+    margin-left: 1em;
     margin-bottom: 0;
 }
 dl dt {
@@ -1520,10 +1530,15 @@ table tr.even td {
     }
 }
 /* Media query for small tablets */
+@media print{
+    html {
+        font-size: 80%;
+    }
+}
 @media handheld, 
 only screen and (max-width: 600px),
 only screen and (max-device-width: 600px) and (orientation:portrait) {
-    body {
+    html {
         font-size: 80%;
     }
     .row {
