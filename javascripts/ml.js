@@ -13,7 +13,7 @@ function buildErrorMessage(e){
 
 function get_file(url){
     var string = $.ajax({url: url,async: false
-                 }).responseText;
+    }).responseText;
     return string;
 }
 
@@ -55,7 +55,5 @@ $(document).ready( function (){
     $("#message").text(text);
 
 
-    $(document).ready(function() {
-        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-    });
+    $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
 });
