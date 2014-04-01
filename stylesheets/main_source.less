@@ -723,7 +723,7 @@ p {
     margin-bottom: 1.25em;
     padding: 0;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 1.75em;
     .font-family-sans();
     widows: 3;
     orphans: 3;
@@ -739,8 +739,9 @@ blockquote,
 blockquote p {
     color: @color-front-lesser;
     font-size: 0.9rem;
-    line-height: 1.8rem;
+    line-height: 1.6rem;
     .font-family-sans("Verdana");
+    text-align: justify;
     position: relative;
 }
 blockquote {
@@ -750,22 +751,26 @@ blockquote {
 }
 blockquote.pull-quote {
     border-left: 0px;
+    padding-left: 0;
 }
 blockquote.pull-quote:before,
 blockquote.pull-quote:after {
     position: absolute;
     font-size: 150%;
+    line-height: 1em;
     opacity: 30;
 }
 blockquote.pull-quote:before {
-    top: 0;
-    left: 0;
     content: open-quote;
+    margin-right: 0.25em;
+    top: 0;
+    left: -1em;
 }
 blockquote.pull-quote:after {
+    content: close-quote;
+    margin-left: 0.25em;
     bottom: 0;
     right: 0;
-    content: close-quote;
 }
 cite.bq-cite {
     padding-right: 0.5em;
@@ -777,7 +782,7 @@ cite.bq-cite {
     text-align: right;
 }
 cite.bq-cite:before {
-    content: "- ";
+    content: "\2014\2003"; /* Note this is an em dash, not figure dash (minus symbol) */
 }
 sub,
 sup {
@@ -1410,7 +1415,7 @@ table tr.even td {
     cursor: pointer;
     background-color: @color-button-bg;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 1.75em;
     .font-family-sans();
 }
 .tab-container .tab-radio:checked ~ .tab,
@@ -1429,7 +1434,7 @@ table tr.even td {
     width: 100%;
     height: auto;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 1.75em;
     .font-family-sans();
     background-color: @color-bg;
     color: @color-front-lesser;
@@ -1469,7 +1474,7 @@ table tr.even td {
     display: block;
     height: auto;
     padding: 5px;
-    line-height: 2em;
+    line-height: 1.75em;
     background-color: @color-button-bg;
     color: @color-front-normal;
     text-decoration: none;
