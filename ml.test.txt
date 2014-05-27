@@ -51,7 +51,7 @@
 原98代码是基于UBB（the Ultimate Bullet Board）扩展的，现在这类叫做UUCode的代码由于历史原因依然存在于大多数的网络社区上。UBB出现在1996年，BBCode在1998年的时候被加入UBB，当时的HTML远没有完善，浏览器功能也很局限，BBCode的出现仅仅是为了让用户可以快速地写一些HTML代码。考虑到98的历史，当年的使用BBCode也是非常合理，在国内也是引领潮流的。
 
 \fig{begin}
-\img<{/img/HTML5_sticker.png}
+\img<{img/HTML5_sticker.png}
 
 近年来，各种浏览器纷纷登场，W3C规范备受重视，互联网进入了一个新时代。为了向HTML5的理念靠近，98代码进行了一次重新设计。最主要的变化有两个：
 
@@ -599,7 +599,7 @@ TeX-style:
 \code{begin}
 
 \fig>{begin}
-\img>{/img/HTML5_sticker.png}
+\img>{img/HTML5_sticker.png}
 
 近年来，各种浏览器纷纷登场，W3C规范备受重视，互联网进入了一个新时代。为了向HTML5的理念靠近，98代码进行了一次重新设计。最主要的变化有两个：
 
@@ -619,7 +619,7 @@ BBCode-style:
 
 \code{begin}
 [fig>]
-[img>]/img/HTML5_sticker.png[/img>]
+[img>]img/HTML5_sticker.png[/img>]
 
 近年来，各种浏览器纷纷登场，W3C规范备受重视，互联网进入了一个新时代。为了向HTML5的理念靠近，98代码进行了一次重新设计。最主要的变化有两个：
 
@@ -639,7 +639,7 @@ BBCode-style:
 
 \bq{begin}
 \fig>{begin}
-\img>{/img/HTML5_sticker.png}
+\img>{img/HTML5_sticker.png}
 
 近年来，各种浏览器纷纷登场，W3C规范备受重视，互联网进入了一个新时代。为了向HTML5的理念靠近，98代码进行了一次重新设计。最主要的变化有两个：
 
