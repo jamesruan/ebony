@@ -6,6 +6,8 @@ It provides basic stylesheets for the new CC98.org front-end.
 
 ----
 
+Demo [here](http://jamesruan.github.io/ebony).
+
 Need node.js installed.
 
 	npm install 
