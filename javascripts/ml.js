@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var jQuery = $;
-var pegjs = require('pegjs');
+var grammar = require('./grammar.js');
 var hljs = require('highlight.js');
 var stringify = require('json-stringify-safe');
 require('jsml-jquery');
@@ -18,26 +18,19 @@ function get_file(url){
 }
 
 $(document).ready( function (){
-    var grammar = get_file("grammar.pegjs")
     var parser;
-    var date = new Date;
-    var time_start = date.getTime();
     try{
         $("#message").text("Building parser...");
-        parser = pegjs.buildParser(grammar);
+        parser = grammar;
     }catch(e)
     {
         $("#message").text(buildErrorMessage(e));
         return;
     }
 
-    date = new Date;
-    var time_mid = date.getTime();
-    var text = "Built: time "+(time_mid-time_start).toString()+"ms."
-
     var input = get_file("ml.test.txt");
-    date = new Date;
-    time_mid = date.getTime();
+    var date = new Date;
+    var time_start = date.getTime();
     $("#input").text(input);
     try{
         $("#message").text("Parsing text...");
@@ -51,7 +44,7 @@ $(document).ready( function (){
     $("#html_output").jsml(parsed);
     date = new Date;
     var time_end = date.getTime();
-    text += "Pasered: time "+(time_end-time_mid).toString()+"ms."
+    var text = "Pasered: time "+(time_end-time_start).toString()+"ms."
     $("#message").text(text);
 
 
