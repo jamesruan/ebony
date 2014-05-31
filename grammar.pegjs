@@ -59,7 +59,7 @@
     var full_tag_def = function (old, item){
         old[item[0]]={"tag": item[1], "prefix": item[2], "suffix":item[3]};
         return old;
-    };
+    }
 
     return tag_define.reduce(full_tag_def, {});
     }).call(this);
@@ -67,7 +67,7 @@
     function mkInt(string_arr)
     {
         return parseInt(string_arr.join(""), 10);
-    };
+    }
 
     function mkStr(text)
     {
@@ -84,7 +84,7 @@
             return t?true:false;
         };
         return to.concat(from.filter(not_empty));
-    };
+    }
 
     function gen_tag(child, tag, attr){
         /*
@@ -263,13 +263,13 @@ Table
 BBC_Table
 = c:BBC_Table_start r:BBC_Table_Rows BBC_Table_end
 {
-	if(c)
-	{
-		var arr = gen_tag([gen_tag(c, "table_cap")], "table");
+    var arr;
+	if(c){
+		arr = gen_tag([gen_tag(c, "table_cap")], "table");
 		arr.push(r);
 	}
 	else
-		var arr = gen_tag([r], "table");
+		arr = gen_tag([r], "table");
 	return arr;
 }
 
@@ -316,13 +316,14 @@ BBC_Table_end
 TeX_Table
 = c:TeX_Table_start r:TeX_Table_Rows TeX_Table_end
 {
+    var arr;
 	if(c)
 	{
-		var arr = gen_tag([gen_tag(c, "table_cap")], "table");
+		arr = gen_tag([gen_tag(c, "table_cap")], "table");
 		arr.push(r);
 	}
 	else
-		var arr = gen_tag([r], "table");
+		arr = gen_tag([r], "table");
 	return arr;
 }
 
@@ -415,7 +416,7 @@ BBC_Code_start
 
 BBC_Code_content
 =a:(!BBC_Code_end !BBC_Code_start a:. {return a;})+ 
-{return mkStr(a.join(""))};
+{return mkStr(a.join(""));};
 
 BBC_Code_end
 = BLSP "[/" Code_tag "+"? "]" BLSP
@@ -445,7 +446,7 @@ TeX_Code_start
 
 TeX_Code_content
 = a:(!TeX_Code_end !TeX_Code_start a:. {return a;})+ 
-{return mkStr(a.join(""))};
+{return mkStr(a.join(""));};
 
 TeX_Code_end
 = BLSP "\\" Code_tag "+"? BLSP "{end}" BLSP
@@ -468,7 +469,7 @@ Code_option
 /("r"i /"s"i/ "splus") {return "r";}
 /"go"i {return "go";}
 /"scala"i {return "scala";}
-/("cl"i /"el"i /"lisp"i /"lsp"i /"scm"i /"ss"i /"rkt"i) {return "lisp"}
+/("cl"i /"el"i /"lisp"i /"lsp"i /"scm"i /"ss"i /"rkt"i) {return "lisp";}
 /("erlang"i /"erl") {return "erlang";}
 
 
@@ -747,7 +748,7 @@ Heading
 BBC_Heading
 = t:BBC_Heading_start a:Heading_content BBC_Heading_end
 {
-	return gen_tag(a, t);
+	return [gen_tag(a, t)];
 }
 
 BBC_Heading_start
@@ -865,7 +866,7 @@ Anchor = BBC_Anchor / TeX_Anchor
 BBC_Anchor
 = BBC_Anchor_start a:BBC_Anchor_content BBC_Anchor_end
 {
-	var attr={"id":"inpage-anchor-"+a}
+	var attr={"id":"inpage-anchor-"+a};
 	return gen_tag([], "href", attr);
 }
 
@@ -874,7 +875,7 @@ BBC_Anchor_start
 
 BBC_Anchor_content
 = a:(!BBC_Anchor_end a:(Str/Space){return a;})+
-{return a.join("")}
+{return a.join("");}
 
 BBC_Anchor_end
 = _ "[/"Anchor_tag"]"
@@ -882,7 +883,7 @@ BBC_Anchor_end
 TeX_Anchor
 = TeX_Anchor_start a:TeX_Anchor_content TeX_Anchor_end
 {
-	var attr={"id":"inpage-anchor-"+a}
+	var attr={"id":"inpage-anchor-"+a};
 	return gen_tag([], "href", attr);
 }
 
@@ -891,7 +892,7 @@ TeX_Anchor_start
 
 TeX_Anchor_content
 = a:(!TeX_Anchor_end a:(Str/Space){return a;})+
-{return a.join("")}
+{return a.join("");}
 
 TeX_Anchor_end
 = _ "}"
@@ -905,7 +906,7 @@ Toanchor = BBC_Toanchor / TeX_Toanchor
 BBC_Toanchor
 = o:BBC_Toanchor_start a:BBC_Toanchor_content BBC_Toanchor_end
 {
-	var attr={"href":"#inpage-anchor-"+a}
+	var attr={"href":"#inpage-anchor-"+a};
 	if(o)
 		return gen_tag(o, "href", attr);
 	else
@@ -918,7 +919,7 @@ BBC_Toanchor_start
 
 BBC_Toanchor_optional_text
 = "{" _ a:(!(_ "}") a:Inline{return a;})+ _ "}"
-{return a}
+{return a;}
 
 BBC_Toanchor_content
 = a:(!BBC_Anchor_end a:(Str/Space){return a;})+
@@ -930,7 +931,7 @@ BBC_Toanchor_end
 TeX_Toanchor
 = o:TeX_Toanchor_start a:TeX_Toanchor_content TeX_Toanchor_end
 {
-	var attr={"href":"#inpage-anchor-"+a}
+	var attr={"href":"#inpage-anchor-"+a};
 	if(o)
 		return gen_tag(o, "href", attr);
 	else
@@ -1439,12 +1440,12 @@ BBC_Color
 = o:BBC_Color_start a:(!BBC_Color_end !Color a:Inline {return a;})+ BBC_Color_end
 {
     var attr;
-    if(o["t"] === "color")
-        attr={"style":"color: " + o["c"]};
+    if(o.t === "color")
+        attr={"style":"color: " + o.c};
     else
-        attr={"style":"background-color: " + o["c"]};
+        attr={"style":"background-color: " + o.c};
 
-    return gen_tag(a, o["t"], attr);
+    return gen_tag(a, o.t, attr);
 }
 
 BBC_Color_start
@@ -1462,12 +1463,12 @@ TeX_Color
 = o:TeX_Color_start a:(!TeX_Color_end !Color a:Inline {return a;})+ TeX_Color_end
 {
     var attr;
-    if(o["t"] === "color")
-        attr={"style":"color: " + o["c"]};
+    if(o.t === "color")
+        attr={"style":"color: " + o.c};
     else
-        attr={"style":"background-color: " + o["c"]};
+        attr={"style":"background-color: " + o.c};
 
-    return gen_tag(a, o["t"], attr);
+    return gen_tag(a, o.t, attr);
 }
 
 TeX_Color_start
