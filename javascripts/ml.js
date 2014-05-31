@@ -12,7 +12,7 @@ function buildErrorMessage(e){
 }
 
 function get_file(url){
-    var string = $.ajax({url: url,async: false
+    var string = $.ajax({url: url,async: false, cache: false, dataType: "text"
     }).responseText;
     return string;
 }
@@ -28,7 +28,7 @@ $(document).ready( function (){
         return;
     }
 
-    var input = get_file("ml.test.txt");
+    var input = get_file("ml.ml.js");
     var date = new Date;
     var time_start = date.getTime();
     $("#input").text(input);

@@ -87,6 +87,9 @@
     };
 
     function gen_tag(child, tag, attr){
+        /*
+         * (child, tag ,attr, sibling) => [tag {attr} child]
+         */
         if(_DEBUG_){
             var log = "[";
             if(tag)
