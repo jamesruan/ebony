@@ -637,7 +637,8 @@ h5,
 h6 {
   font-family: "Ubuntu", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   font-style: normal;
-  color: #222222;
+  /* heading are usually big enough. so use lesser color to avoid too strong feeling */
+  color: #444444;
   line-height: 1em;
   margin-top: 1.5em;
   margin-bottom: .5em;
