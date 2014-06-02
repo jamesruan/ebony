@@ -1076,7 +1076,7 @@ BBC_Abbr
 a:( !BBC_Abbr_end !Abbr a:Inline {return a;})+ 
 BBC_Abbr_end
 {
-	var attr = {"title":title};
+	var attr = {"data-title":title};
 	return gen_tag(a, "abbr", attr);
 }
 
@@ -1092,7 +1092,7 @@ TeX_Abbr
 a:( !TeX_Abbr_end !Abbr a:Inline {return a;})+ 
 TeX_Abbr_end
 {
-	var attr = {"title":title};
+	var attr = {"data-title":title};
 	return gen_tag(a, "abbr", attr);
 }
 

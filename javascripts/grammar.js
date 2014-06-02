@@ -425,7 +425,7 @@ module.exports = (function() {
         peg$c254 = { type: "literal", value: "[newline]", description: "\"[newline]\"" },
         peg$c255 = function() {return ["br"];},
         peg$c256 = function(title, a) {
-        	var attr = {"title":title};
+        	var attr = {"data-title":title};
         	return gen_tag(a, "abbr", attr);
         },
         peg$c257 = function(title) {return mkStr(title.join(""));},
