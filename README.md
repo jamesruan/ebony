@@ -8,6 +8,8 @@ It provides basic stylesheets for the new CC98.org front-end.
 
 Demo [here](http://jamesruan.github.io/ebony).
 
+The Markup Language's Tutorial is [here](http://jamesruan.github.io/ebony/ml_tutorial.html).
+
 Need node.js installed.
 
 	npm install 
