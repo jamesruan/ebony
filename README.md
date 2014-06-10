@@ -14,6 +14,9 @@ Need node.js installed.
 
 	npm install 
 
+if too slow try this before:
+    npm config set registry http://registry.cnpmjs.org 
+
 then (if on linux)
 
     make
