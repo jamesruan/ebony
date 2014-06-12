@@ -7,9 +7,9 @@ node: node_modules
 
 browserify: javascripts/ml.js javascripts/ml_tutorial.js
 	pegjs grammar.pegjs javascripts/grammar.js
-	browserify -r jquery -r highlight.js -r json-stringify-safe -r jsml-jquery | uglifyjs > javascripts/bundle.min.js 
-	browserify -x jquery -x highlight.js -x json-stringify-safe -x jsml-jquery javascripts/ml.js |uglifyjs > javascripts/ml.min.js
-	browserify -x jquery -x highlight.js -x json-stringify-safe -x jsml-jquery javascripts/ml_tutorial.js |uglifyjs > javascripts/ml_tutorial.min.js
+	browserify -r jquery -r highlight.js -r json-stringify-safe -r jsml-jquery -r knockout | uglifyjs > javascripts/bundle.min.js 
+	browserify -x jquery -x highlight.js -x json-stringify-safe -x jsml-jquery -x knockout javascripts/ml.js |uglifyjs > javascripts/ml.min.js
+	browserify -x jquery -x highlight.js -x json-stringify-safe -x jsml-jquery -x knockout javascripts/ml_tutorial.js |uglifyjs > javascripts/ml_tutorial.min.js
 
 grammar: grammar.pegjs node
 
