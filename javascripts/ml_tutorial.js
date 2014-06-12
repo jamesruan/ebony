@@ -1,6 +1,6 @@
 var $=require('jquery');
 var jsml=require('jsml-jquery');
-var grammar = require('./grammar.js');
+var grammar = require('grammar');
 
 function get_file(url){
     var string = $.ajax({url: url, async: false, cache: false, dataType: "text"

@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var jQuery = $;
-var grammar = require('./grammar.js');
+var grammar = require('grammar');
 var hljs = require('highlight.js');
 var stringify = require('json-stringify-safe');
 require('jsml-jquery');
