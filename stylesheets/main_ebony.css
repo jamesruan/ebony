@@ -843,7 +843,7 @@ small {
 }
 mark {
   color: #31b4d6;
-  background-color: #2d2d2d;
+  background-color: inherit;
   line-height: inherit;
 }
 cite {
