@@ -1302,7 +1302,7 @@ Code_inline
 BBC_Code_inline
 = BBC_Code_inline_start a:BBC_Code_inline_content BBC_Code_inline_end
 {
-	return gen_tag([a], "code_@", {"class": "inline"});
+	return gen_tag([a], "code_@", {"class": "code-inline"});
 }
 
 BBC_Code_inline_start
@@ -1318,7 +1318,7 @@ BBC_Code_inline_end
 TeX_Code_inline
 = TeX_Code_inline_start a:TeX_Code_inline_content TeX_Code_inline_end
 {
-	return gen_tag([a], "code_@", {"class": "inline"});
+	return gen_tag([a], "code_@", {"class": "code-inline"});
 }
 
 TeX_Code_inline_start
