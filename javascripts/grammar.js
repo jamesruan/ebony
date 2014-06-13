@@ -453,7 +453,7 @@ module.exports = (function() {
         peg$c279 = "i",
         peg$c280 = { type: "literal", value: "i", description: "\"i\"" },
         peg$c281 = function(a) {
-        	return gen_tag([a], "code_@", {"class": "inline"});
+        	return gen_tag([a], "code_@", {"class": "code-inline"});
         },
         peg$c282 = "@",
         peg$c283 = { type: "literal", value: "@", description: "\"@\"" },

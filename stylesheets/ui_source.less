@@ -1,0 +1,681 @@
+/* ---- Caret made by hand ---- */
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid @color-front-normal;
+    border-right: 4px solid transparent;
+    border-bottom: 0 dotted;
+    border-left: 4px solid transparent;
+}
+/* ---- Lists ---- */
+ul,
+ol,
+dl {
+    font-size: 1em;
+    line-height: 2em;
+    .font-family-sans();
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    list-style-position: inside;
+    color: @color-front-lesser;
+}
+ul li ul,
+ul li ol {
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+ul.square {
+    list-style-type: square;
+}
+ul.circle {
+    list-style-type: circle;
+}
+ul.disc {
+    list-style-type: disc;
+}
+ul.no-bullet {
+    list-style: none;
+}
+ul.square li ul,
+ul.circle li ul,
+ul.disc li ul,
+ul.no-bullet li ul {
+    margin-left: 1em;
+}
+ol li ul,
+ol li ol {
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+dl dt {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+dl dd {
+    margin-left: 1em;
+}
+/* ---- Forms ---- */
+fieldset {
+  border: 1px solid @color-border;
+}
+.vform {
+    width: 100%;
+    max-width: 320px;
+}
+.hform {
+    width: 100%;
+    max-width: 420px;
+}
+.vform,
+.hform {
+    margin-bottom: 20px;
+    font-size: 1em;
+    .font-family-sans();
+    color: @color-front-lesser;
+}
+.vform label {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.hform label {
+    width: 40%;
+    margin-bottom: 10px;
+}
+.vform label,
+.hform label {
+    font-size: 1em;
+    line-height: 1.2em;
+    vertical-align: middle;
+    display: block;
+    float: left;
+    text-align: left;
+}
+.vform textarea,
+.vform input[type="text"],
+.vform input[type="password"],
+.vform input[type="datetime"],
+.vform input[type="datetime-local"],
+.vform input[type="date"],
+.vform input[type="month"],
+.vform input[type="time"],
+.vform input[type="week"],
+.vform input[type="number"],
+.vform input[type="email"],
+.vform input[type="url"],
+.vform input[type="tel"],
+.vform input[type="color"],
+.vform select {
+    width: 100%;
+}
+.hform textarea,
+.hform input[type="text"],
+.hform input[type="password"],
+.hform input[type="datetime"],
+.hform input[type="datetime-local"],
+.hform input[type="date"],
+.hform input[type="month"],
+.hform input[type="time"],
+.hform input[type="week"],
+.hform input[type="number"],
+.hform input[type="email"],
+.hform input[type="url"],
+.hform input[type="tel"],
+.hform input[type="color"],
+.hform select {
+    width: 60%;
+}
+.vform textarea,
+.vform input[type="text"],
+.vform input[type="password"],
+.vform input[type="datetime"],
+.vform input[type="datetime-local"],
+.vform input[type="date"],
+.vform input[type="month"],
+.vform input[type="time"],
+.vform input[type="week"],
+.vform input[type="number"],
+.vform input[type="email"],
+.vform input[type="url"],
+.vform input[type="tel"],
+.vform input[type="color"],
+.vform select,
+.vform input[type=file],
+.hform textarea,
+.hform input[type="text"],
+.hform input[type="password"],
+.hform input[type="datetime"],
+.hform input[type="datetime-local"],
+.hform input[type="date"],
+.hform input[type="month"],
+.hform input[type="time"],
+.hform input[type="week"],
+.hform input[type="number"],
+.hform input[type="email"],
+.hform input[type="url"],
+.hform input[type="tel"],
+.hform input[type="color"],
+.hform select,
+.hform input[type=file] {
+    display: block;
+    color: @color-front-lesser;
+    background: @color-bg;
+    border: 1px solid @color-border;
+    padding: 5px 10px;
+    vertical-align: middle;
+    outline: none;
+    .border-radius(4px);
+    .transition(border linear 0.4s, box-shadow linear 0.4s;);
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+.vform input[type="text"]:focus,
+.vform input[type="password"]:focus,
+.vform input[type="datetime"]:focus,
+.vform input[type="email"]:focus,
+.vform input[type="datetime-local"]:focus,
+.vform input[type="date"]:focus,
+.vform input[type="month"]:focus,
+.vform input[type="time"]:focus,
+.vform input[type="week"]:focus,
+.vform input[type="url"]:focus,
+.vform input[type="number"]:focus,
+.vform input[type="search"]:focus,
+.vform input[type="tel"]:focus,
+.vform textarea:focus,
+.hform textarea:focus,
+.hform input[type="text"]:focus,
+.hform input[type="password"]:focus,
+.hform input[type="datetime"]:focus,
+.hform input[type="datetime-local"]:focus,
+.hform input[type="date"]:focus,
+.hform input[type="month"]:focus,
+.hform input[type="time"]:focus,
+.hform input[type="week"]:focus,
+.hform input[type="number"]:focus,
+.hform input[type="email"]:focus,
+.hform input[type="url"]:focus,
+.hform input[type="search"]:focus,
+.hform input[type="tel"]:focus,
+.hform input[type="color"]:focus {
+    border: 1px solid @color-border;
+    border-color: @color-border-focus;
+    color: @color-front-lesser;
+    .box-shadow(inset  0 0 1px @color-box-shadow);
+}
+.vform textarea,
+.hform textarea {
+    min-height: 120px;
+}
+.vform fieldset,
+.hform fieldset {
+    margin-bottom: 10px;
+}
+.vform input[type="file"],
+.hform input[type="file"] {
+    overflow: visible;
+}
+/* conjoined inputs */
+.vform span.pre,
+.hform span.pre,
+.vform span.post,
+.hform span.post {
+    display: block;
+    border: 1px solid @color-border;
+    background-color: @color-form-span-bg;
+    color: @color-front-lesser;
+    vertical-align: middle;
+    font-size: 0.8em;
+    position: relative;
+    padding: 5px 10px;
+}
+.vform span.pre,
+.hform span.pre {
+    margin-right: -1px;
+    float: left;
+}
+.vform span.post,
+.hform span.post {
+    margin-left: -1px;
+    float: left;
+}
+.vform input.post,
+.hform input.post,
+.vform span.pre,
+.hform span.pre {
+    .border-radius(4px 0 0 4px);
+}
+.vform input.pre,
+.hform input.pre,
+.vform span.post,
+.hform span.post {
+    .border-radius(0 4px 4px 0);
+}
+.vform input.pre,
+.vform input.post {
+    width: 75%;
+    float: left;
+}
+.hform input.pre,
+.hform input.post {
+    width: 40%;
+    float: left;
+}
+.vform input.pre-post {
+    width: 70%;
+    float: left;
+    .border-radius(0);
+}
+.hform input.pre-post {
+    width: 40%;
+    float: left;
+    .border-radius(0);
+}
+.vform span[type="submit"].post,
+.hform span[type="submit"].post,
+.vform span[type="submit"].pre,
+.hform span[type="submit"].pre {
+    cursor: pointer;
+    background-color: @color-form-span-bg;
+}
+.vform span[type="submit"].post:hover,
+.hform span[type="submit"].post:hover,
+.vform span[type="submit"].pre:hover,
+.hform span[type="submit"].pre:hover {
+    background-color: @color-form-span-bg;
+}
+/* ---- Buttons ---- */
+button {
+    display: inline-block;
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    color: @color-front-normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid @color-border;
+    .border-radius(4px);
+    .box-shadow( 0 0 1px rgba(0,0,0,0.1));
+    background-color: @color-button-bg;
+    .transition(box-shadow linear 0.4s, background-color linear 0.4s;);
+}
+button.pill{
+    .border-radius(.6em);
+}
+button:hover,
+button:active {
+    background-color: @color-button-active-bg;
+}
+button.large {
+    padding: 10px 35px;
+    font-size: 1em;
+}
+button.small {
+    padding: 3px 13px;
+    font-size: 0.6em;
+}
+button.skyblue {
+    /* --- skyblue color button --- */
+    color: white !important;
+    background-color: #26a2b6;
+}
+button.skyblue:hover,
+button.skyblue:active {
+    background-color: #34bac9;
+}
+button.blue {
+    /* --- blue color button --- */
+    color: white !important;
+    background-color: #0085c6;
+}
+button.blue:hover,
+button.blue:active {
+    background-color: #009de9;
+}
+button.green {
+    /* --- green color button --- */
+    color: white !important;
+    background-color: #51A351;
+}
+button.green:hover,
+button.green:active {
+    background-color: #69B569;
+}
+button.yellow {
+    /* --- yellow color button --- */
+    color: white !important;
+    background-color: #f0bf4a;
+}
+button.yellow:hover,
+button.yellow:active {
+    background-color: #f0c930;
+}
+button.orange {
+    /* --- orange color button --- */
+    color: white !important;
+    background-color: #ff5c00;
+}
+button.orange:hover,
+button.orange:active {
+    background: #ff6f40;
+}
+button.red {
+    /* --- red color button --- */
+    color: white !important;
+    background-color: #bd362f;
+}
+button.red:hover,
+button.red:active {
+    background-color: #cc3b34;
+}
+button.magenta {
+    /* --- magenta color button --- */
+    color: white !important;
+    background-color: #b9298f;
+}
+button.magenta:hover,
+button.magenta:active {
+    background-color: #cd2d9a;
+}
+button.black {
+    /* --- black color button --- */
+    color: white !important;
+    background-color: #111;
+}
+button.black:hover,
+button.black:active {
+    background: #333;
+}
+/* ---- Alerts ---- */
+.alert {
+    padding: 10px;
+    margin-bottom: 18px;
+    color: @color-alert-normal;
+    font-size: 0.8em;
+    .font-family-sans("Ubuntu");
+    background-color: @color-alert-normal-bg;
+    border: 1px solid @color-border;
+    .border-radius(4px);
+}
+.success {
+    color: @color-alert-success;
+    background-color: @color-alert-success-bg;
+}
+.error {
+    color: @color-alert-error;
+    background-color: @color-alert-error-bg;
+}
+.info {
+    color: @color-alert-info;
+    background-color: @color-alert-info-bg;
+}
+/* ---- Table ---- */
+table {
+    .font-family-sans();
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    width: 100%;
+    border: solid 1px @color-border;
+    .border-radius(5px);
+}
+table caption{
+    padding: 0.5em;
+    font-size: 120%;
+}
+td,
+th {
+    border-top: 1px solid @color-border;
+    border-left: 1px solid @color-border;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: @color-form-span-bg;
+    text-align: center;
+}
+table tr:first-child th:first-child {
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+}
+table tr:first-child th:last-child {
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+}
+table tr:last-child td:first-child {
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
+}
+table tr:last-child td:last-child {
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-right-radius: 5px;
+}
+table tr.even td {
+    background-color: @color-table-alter;
+}
+/* ---- Pagination ---- */
+.pagin ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pagin li {
+    display: inline;
+}
+.pagin a {
+    .border-radius(3px);
+    padding: 5px 10px 5px 5px;
+    display: inline-block;
+    text-decoration: none !important;
+    color: @color-front-normal;
+    font-size: 0.6em;
+    .font-family-sans();
+    background-color: @color-button-bg;
+}
+.pagin a:hover,
+.pagin a:focus {
+    background-color: @color-button-active-bg;
+}
+.pagin a.more {
+    .box-shadow( none);
+    border: 0 none !important;
+    background: transparent !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+.pagin a {
+    .box-shadow( 0 0 1px rgba(0, 0, 0, 0.1));
+}
+.pagin a.active {
+    .box-shadow( inset  0 0 0 rgba(0, 0, 0, 0.75));
+    color: @color-bg !important;
+    background-color: @color-front-lesser;
+}
+/* ---- Tooltip ---- */
+.tooltip {
+    display: inline;
+    position: relative;
+    color: @color-1st;
+    .transition(background-color linear 0.4s);
+}
+.tooltip:hover {
+    display: inline;
+    position: relative;
+    color: @color-1st;
+    background-color: @color-bg-lesser;
+}
+.tooltip > span {
+    opacity: 0;
+    display: inline;
+    padding: 0 1em;
+    font-size: small;
+    min-width: 5em;
+    max-width: 24em;
+    position: absolute;
+    margin-top: 2em;
+    margin-left: -2em;
+    .border-radius(3px);
+    border-style: dashed;
+    border-width: 1px;
+    border-color: @color-border;
+    color: @color-front-normal;
+    background-color: @color-bg-lesser;
+    .transition(opacity linear 0.4s);
+}
+.tooltip:hover > span {
+    opacity: 1;
+}
+abbr:hover::after {
+    opacity: 1;
+    .transition(opacity linear 0.4s);
+}
+abbr::after {
+    content: attr(data-title);
+    opacity: 0;
+    display: inline;
+    padding: 0 1em;
+    font-size: small;
+    min-width: 5em;
+    max-width: 25em;
+    position: absolute;
+    margin-top: 2em;
+    margin-left: -2em;
+    .border-radius(3px);
+    border-style: dashed;
+    border-width: 1px;
+    border-color: @color-border;
+    color: @color-front-normal;
+    background-color: @color-bg-lesser;
+}
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+    padding: 10px;
+    font-size: 1em;
+    .font-family-sans();
+    background-color: @color-form-span-bg;
+    border: 1px solid @color-border;
+    .border-radius(3px);
+}
+.breadcrumb li {
+    display: inline-block;
+}
+.breadcrumb .divider {
+    padding: 0 5px;
+}
+/* ---- Tabs ---- */
+.tab-container {
+    position: relative;
+    display: block;
+    height: 280px;
+    width: 100%;
+    padding: 1px 0;
+}
+.tab-container .tab-radio {
+    display: none;
+}
+.tab-container .tab {
+    display: block;
+    float: left;
+    position: relative;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid @color-border;
+    border-bottom: none;
+    color: @color-front-lesser;
+    margin-right: 0.5em;
+    padding: 0.5em 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: @color-button-bg;
+    font-size: 1em;
+    line-height: 1.75em;
+    .font-family-sans();
+}
+.tab-container .tab-radio:checked ~ .tab,
+.tab-container .tab-radio:active ~ .tab {
+    background-color: @color-bg;
+    z-index: 100;
+    border-bottom: 1px solid @color-bg;
+}
+.tab-container .tab-radio:checked ~ .tab {
+    background-color: @color-bg;
+    color: @color-front-normal;
+}
+.tab-container .tab-page
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    line-height: 1.75em;
+    .font-family-sans();
+    background-color: @color-bg;
+    color: @color-front-lesser;
+    display: block;
+    position: absolute;
+    top: 3em;
+    float: left;
+    padding: 10px;
+    border: 1px solid @color-border;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    .box-shadow(0 1px 1px rgba(0,0,0,.1));
+}
+.tab-container .tab-radio:checked ~ .tab-page {
+    visibility: visible;
+    display: block;
+    height: auto
+}
+/* ---- Accordion ---- */
+.accordion {
+    width: 100%;
+    background: @color-bg;
+    font-size: 1em;
+    .font-family-sans();
+    border: 1px solid @color-border;
+    .border-radius(5px);
+}
+.accordion p {
+    height: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    color: @color-front-lesser;
+    overflow: hidden;
+}
+.accordion a {
+    display: block;
+    height: auto;
+    padding: 5px;
+    line-height: 1.75em;
+    background-color: @color-button-bg;
+    color: @color-front-normal;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid @color-border;
+    .border-radius(5px);
+}
+.accordion a:hover,
+.accordion a:focus {
+    opacity: .9;
+}
+.accordion a:active {
+    color: @color-front-normal;
+    background-color: @color-button-active-bg;
+}
+.accordion :target + p {
+    margin: 0 2px;
+    padding: 10px 15px;
+    height: auto;
+    .border-radius(5px);
+    .box-shadow( 0 1px 1px rgba(0,0,0,.3));
+}
