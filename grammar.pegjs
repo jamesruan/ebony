@@ -458,15 +458,20 @@ Code_option
 /("js"i /"javascript"i) {return "javascript";}
 /"coffee"i {return "coffeescript";}
 /"java"i {return "java";}
+/"php"i {return "php";}
 /("htm"i /"html"i) {return "html";}
 /"xhtml"i {return "xhtml";}
+/"http"i {return "http";}
 /"xml"i {return "xml";}
 /"css"i {return "css";}
 /"sql"i {return "sql";}
 /("cv"i /"py"i /"python"i) {return "python";}
 /("pm"i /"pl"i /"perl"i) {return "perl";}
 /("rb"i /"ruby"i) {return "ruby";}
-/("r"i /"s"i/ "splus") {return "r";}
+/"lua"i {return "lua";}
+/("r"i /"s"i/ "splus"i) {return "r";}
+/("m"i /"matlab"i) {return "matlab";}
+/"tex"i {return "tex";}
 /"go"i {return "go";}
 /"scala"i {return "scala";}
 /("cl"i /"el"i /"lisp"i /"lsp"i /"scm"i /"ss"i /"rkt"i) {return "lisp";}
