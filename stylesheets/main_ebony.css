@@ -842,7 +842,6 @@ samp {
   font-family: "Lucida Console", "Droid Sans Mono", "Courier New", "Courier", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace, sans-serif;
 }
 pre {
-  overflow: hidden;
   margin: 0 1em 0 1em;
   border: thin solid #525252;
   -webkit-border-radius: 0.25em;
@@ -851,12 +850,13 @@ pre {
   background-clip: padding-box;
 }
 pre code {
+  overflow-wrap: break-word;
   padding: 1em;
   margin: 0.5em;
   border: none;
 }
 code {
-  display: inline-block;
+  display: inherit;
 }
 code.code-inline {
   display: inline;
