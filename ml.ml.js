@@ -217,6 +217,21 @@ BBCode-style:
 
 代码标签用来表示一段文字是计算机语言，其中的文字除了开头和结尾部分的空行外会原样不变地显示出来，有区块级和行内级两种标签，分别是\@code\@和\@@\@，\@code+\@会自动猜测语言，并语法高亮，还可以通过添加参数指定语言（代码量比较少的时候自动猜测容易出错）。
 
+支持的可以制定的语言包括：
+
+\list*{
+    \* C类（c, cxx, cc, cpp, c++, cs, c#, java）
+    \* Javascript类（js, javascript, json, coffee）
+    \* XML类（htm, html, xhtml, xml）
+    \* CSS（css）
+    \* PHP（php）
+    \* HTTP（http）
+    \* 脚本类（py, python, cv, pl, perl, pm, rb, ruby, lua）
+    \* 专业领域类（sql, r, s, splus, tex）
+    \* GO（go）
+    \* Functional类（scala, cl, el, lisp, lsp, scm, ss, rkt, erl, erlang）
+}
+
 
 Tex-style:
 
