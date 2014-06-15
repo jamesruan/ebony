@@ -7,7 +7,7 @@ node: node_modules
 
 browserify: javascripts/ml.js javascripts/ml_tutorial.js
 	pegjs grammar.pegjs javascripts/grammar.js
-	browserify -r jquery -r highlight.js -r json-stringify-safe -r jsml-jquery -r knockout -r ./javascripts/grammar.js:grammar -r ./javascripts/sammy-0.7.5.min.js:Sammy -r ./javascripts/render_ml.js:ML |uglifyjs --stats > javascripts/bundle.min.js 
+	browserify -r jquery -r highlight.js -r json-stringify-safe -r jsml-jquery -r knockout -r ./javascripts/grammar.js:grammar -r ./javascripts/sammy-0.7.5.min.js:Sammy -r ./javascripts/ML.js:ML |uglifyjs --stats > javascripts/bundle.min.js 
 	browserify -x jquery -x highlight.js -x json-stringify-safe -x jsml-jquery -x knockout -x grammar -x Sammy -x ML javascripts/ml.js |uglifyjs --stats > javascripts/ml.min.js
 	browserify -x jquery -x highlight.js -x json-stringify-safe -x jsml-jquery -x knockout -x grammar -x Sammy -x ML javascripts/ml_tutorial.js |uglifyjs --stats > javascripts/ml_tutorial.min.js
 

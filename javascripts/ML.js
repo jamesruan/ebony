@@ -17,12 +17,18 @@ var ML = function(){
         var time_start;
         var time_end;
         time_start = date.getTime();
-        messageDOM.text("语法解析中...");
+        if(messageDOM){
+            messageDOM.text("语法解析中...");
+        }
         try{
             parsed = grammar.parse(text);
         }catch(e)
         {
-            messageDOM.text(buildErrorMessage(e));
+            if(messageDOM){
+                messageDOM.text(buildErrorMessage(e));
+            }else{
+                console.log(buildErrorMessage(e));
+            }
             return false;
         }
         date = new Date;
@@ -30,21 +36,34 @@ var ML = function(){
         console.log( "Pasered: time "+(time_end-time_start).toString()+"ms." );
 
         time_start = date.getTime();
-        messageDOM.text("渲染中...");
+        if(messageDOM){
+            messageDOM.text("渲染中...");
+        }
         try{
             if(ast){
                 ast.text(stringify(parsed));
             }
-            targetDOM.jsml(parsed);
-            targetDOM.find('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+            if(targetDOM){
+                targetDOM.jsml(parsed);
+                targetDOM.find('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+            }else{
+                var targetDOM = $("<div>").jsml(parsed);
+                targetDOM.find('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+            }
         }catch(e)
         {
-            messageDOM.text(buildErrorMessage(e));
+            if(messageDOM){
+                messageDOM.text(buildErrorMessage(e));
+            }else{
+                console.log(buildErrorMessage(e));
+            }
             return false;
         }
         date = new Date;
         time_end = date.getTime();
-        messageDOM.text("");
+        if(messageDOM){
+                messageDOM.text("");
+        }
         console.log( "Rendered: time "+(time_end-time_start).toString()+"ms." );
 
         if(return_type==="html"){
