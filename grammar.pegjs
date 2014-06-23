@@ -72,11 +72,11 @@
     function mkStr(text)
     {
         return text
-            .replace('&', '&amp;', "g")
-            .replace('"', '&quot;', "g")
-            .replace("'", '&#39;', "g")
-            .replace('<', '&lt;', "g")
-            .replace('>', '&gt;', "g");
+            .replace(/&/g, '&amp;' )
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
     }
 
     function merge_array(to, from){
