@@ -20,7 +20,7 @@ dl {
     margin-bottom: 0.5em;
     padding-left: 1em;
     list-style-position: inside;
-    color: @color-front-lesser;
+    color: @color-front-normal;
 }
 ul li ul,
 ul li ol {
@@ -74,7 +74,7 @@ fieldset {
     margin-bottom: 20px;
     font-size: 1em;
     .font-family-sans();
-    color: @color-front-lesser;
+    color: @color-front-normal;
 }
 .vform label {
     width: 100%;
@@ -160,7 +160,7 @@ fieldset {
 .hform select,
 .hform input[type=file] {
     display: block;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     background: @color-bg;
     border: 1px solid @color-border;
     padding: 5px 10px;
@@ -203,7 +203,7 @@ fieldset {
 .hform input[type="color"]:focus {
     border: 1px solid @color-border;
     border-color: @color-border-focus;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     .box-shadow(inset  0 0 1px @color-box-shadow);
 }
 .vform textarea,
@@ -226,7 +226,7 @@ fieldset {
     display: block;
     border: 1px solid @color-border;
     background-color: @color-form-span-bg;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     vertical-align: middle;
     font-size: 0.8em;
     position: relative;
@@ -497,28 +497,27 @@ table tr.even td {
 .pagin a.active {
     .box-shadow( inset  0 0 0 rgba(0, 0, 0, 0.75));
     color: @color-bg !important;
-    background-color: @color-front-lesser;
+    background-color: @color-front-normal;
 }
 /* ---- Tooltip ---- */
 .tooltip {
     display: inline;
     position: relative;
-    color: @color-1st;
+    color: @color-accent;
     .transition(background-color linear 0.4s);
 }
 .tooltip:hover {
     display: inline;
     position: relative;
-    color: @color-1st;
-    background-color: @color-bg-lesser;
+    color: @color-accent;
 }
 .tooltip > span {
     opacity: 0;
     display: inline;
     padding: 0 1em;
     font-size: small;
-    min-width: 5em;
-    max-width: 24em;
+    min-width: 8em;
+    max-width: 32em;
     position: absolute;
     margin-top: 2em;
     margin-left: -2em;
@@ -589,7 +588,7 @@ abbr::after {
     border-top-right-radius: 4px;
     border: 1px solid @color-border;
     border-bottom: none;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     margin-right: 0.5em;
     padding: 0.5em 20px;
     text-decoration: none;
@@ -619,7 +618,7 @@ abbr::after {
     line-height: 1.75em;
     .font-family-sans();
     background-color: @color-bg;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     display: block;
     position: absolute;
     top: 3em;
@@ -649,7 +648,7 @@ abbr::after {
     height: 0;
     margin-bottom: 0px;
     padding: 0;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     overflow: hidden;
 }
 .accordion a {

@@ -3,7 +3,7 @@ body {
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     background-color: @color-bg;
 }
 .note {
@@ -15,7 +15,7 @@ body {
 }
 ::selection{
     color: @color-bg;
-    background-color: @color-1st;
+    background-color: @color-accent;
 };
 
 h1,
@@ -27,7 +27,7 @@ h6 {
     .font-family-sans();
     font-style: normal;
     /* heading are usually big enough. so use lesser color to avoid too strong feeling */
-    color: @color-front-lesser;
+    color: @color-front-normal;
     line-height: 1em;
     margin: 1.5em 1rem 0.5em;
     letter-spacing: .1em;
@@ -85,7 +85,7 @@ a {
     line-height: inherit;
 }
 a[href] {
-    color: @color-1st;
+    color: @color-accent;
     .transition(color linear 0.4s, background-color linear 0.4s;);
 }
 a[href].new-window::after{
@@ -127,7 +127,7 @@ p a:visited {
 }
 blockquote,
 blockquote p {
-    color: @color-front-lesser;
+    color: @color-front-normal;
     font-size: 0.9rem;
     line-height: 1.6rem;
     .font-family-sans("Verdana");
@@ -164,7 +164,7 @@ blockquote.pull-quote:after {
 cite {
     padding-left: 0.1em;
     padding-right: 0.25em;
-    color: @color-front-lesser;
+    color: @color-front-normal;
     font-style: italic;
     .font-family-sans("Times New Roman");
     line-height: inherit;
@@ -200,7 +200,7 @@ small {
     font-size: 70%;
 }
 mark {
-    color: @color-1st;
+    color: @color-accent;
     background-color: inherit;
 }
 hr {
