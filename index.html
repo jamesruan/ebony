@@ -11,6 +11,7 @@
 <script type="text/javascript" src="javascripts/bundle.min.js"></script>
 <script type="text/javascript">
 $=require('jquery');
+hljs=require('highlight.js');
 $(document).ready(function() {
         $(".emoji_list").load("emoji.html");
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
