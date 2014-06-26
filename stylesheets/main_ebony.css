@@ -621,11 +621,11 @@ body {
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   background-color: #2d2d2d;
 }
 .note {
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
   background-color: #383838;
   padding: 10px 0;
   -webkit-border-radius: 5px;
@@ -649,7 +649,7 @@ h6 {
   font-family: "Ubuntu", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   font-style: normal;
   /* heading are usually big enough. so use lesser color to avoid too strong feeling */
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   line-height: 1em;
   margin: 1.5em 1rem 0.5em;
   letter-spacing: .1em;
@@ -690,7 +690,7 @@ h4 small,
 h5 small,
 h6 small {
   font-size: 75%;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.54);
 }
 h1 a,
 h2 a,
@@ -725,10 +725,10 @@ a[href].new-window::after {
   padding-right: .2em;
 }
 a:hover {
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.54);
 }
 a:focus {
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.54);
   outline: none;
 }
 p {
@@ -749,7 +749,7 @@ p a:visited {
 }
 blockquote,
 blockquote p {
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   font-size: 0.9rem;
   line-height: 1.6rem;
   font-family: "Verdana", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
@@ -786,7 +786,7 @@ blockquote.pull-quote:after {
 cite {
   padding-left: 0.1em;
   padding-right: 0.25em;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   font-style: italic;
   font-family: "Times New Roman", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   line-height: inherit;
@@ -896,7 +896,7 @@ article.row img.right:after {
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px solid #dddddd;
+  border-top: 4px solid rgba(255, 255, 255, 0.87);
   border-right: 4px solid transparent;
   border-bottom: 0 dotted;
   border-left: 4px solid transparent;
@@ -911,7 +911,7 @@ dl {
   margin-bottom: 0.5em;
   padding-left: 1em;
   list-style-position: inside;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
 }
 ul li ul,
 ul li ol {
@@ -965,7 +965,7 @@ fieldset {
   margin-bottom: 20px;
   font-size: 1em;
   font-family: "Ubuntu", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
 }
 .vform label {
   width: 100%;
@@ -1051,7 +1051,7 @@ fieldset {
 .hform select,
 .hform input[type=file] {
   display: block;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   background: #2d2d2d;
   border: 1px solid #525252;
   padding: 5px 10px;
@@ -1098,7 +1098,7 @@ fieldset {
 .hform input[type="color"]:focus {
   border: 1px solid #525252;
   border-color: rgba(82, 168, 236, 0.8);
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   -webkit-box-shadow: inset 0 0 1px rgba(82, 168, 236, 0.5);
   -moz-box-shadow: inset 0 0 1px rgba(82, 168, 236, 0.5);
   box-shadow: inset 0 0 1px rgba(82, 168, 236, 0.5);
@@ -1123,7 +1123,7 @@ fieldset {
   display: block;
   border: 1px solid #525252;
   background-color: #383838;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   vertical-align: middle;
   font-size: 0.8em;
   position: relative;
@@ -1203,7 +1203,7 @@ button {
   margin-bottom: 10px;
   font-size: 0.8em;
   line-height: 1.2em;
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -1402,7 +1402,7 @@ table tr.even td {
   padding: 5px 10px 5px 5px;
   display: inline-block;
   text-decoration: none !important;
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
   font-size: 0.6em;
   font-family: "Ubuntu", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   background-color: #555555;
@@ -1430,7 +1430,7 @@ table tr.even td {
   -moz-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.75);
   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.75);
   color: #2d2d2d !important;
-  background-color: #bbbbbb;
+  background-color: rgba(255, 255, 255, 0.87);
 }
 /* ---- Tooltip ---- */
 .tooltip {
@@ -1444,15 +1444,14 @@ table tr.even td {
   display: inline;
   position: relative;
   color: #31b4d6;
-  background-color: #383838;
 }
 .tooltip > span {
   opacity: 0;
   display: inline;
   padding: 0 1em;
   font-size: small;
-  min-width: 5em;
-  max-width: 24em;
+  min-width: 8em;
+  max-width: 32em;
   position: absolute;
   margin-top: 2em;
   margin-left: -2em;
@@ -1463,7 +1462,7 @@ table tr.even td {
   border-style: dashed;
   border-width: 1px;
   border-color: #525252;
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
   background-color: #383838;
   -webkit-transition: opacity linear 0.4s;
   transition: opacity linear 0.4s;
@@ -1494,7 +1493,7 @@ abbr::after {
   border-style: dashed;
   border-width: 1px;
   border-color: #525252;
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
   background-color: #383838;
 }
 /* ---- Breadcrumb ---- */
@@ -1534,7 +1533,7 @@ abbr::after {
   border-top-right-radius: 4px;
   border: 1px solid #525252;
   border-bottom: none;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   margin-right: 0.5em;
   padding: 0.5em 20px;
   text-decoration: none;
@@ -1553,7 +1552,7 @@ abbr::after {
 }
 .tab-container .tab-radio:checked ~ .tab {
   background-color: #2d2d2d;
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
 }
 .tab-container .tab-page {
   visibility: hidden;
@@ -1563,7 +1562,7 @@ abbr::after {
   line-height: 1.75em;
   font-family: "Ubuntu", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   background-color: #2d2d2d;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   display: block;
   position: absolute;
   top: 3em;
@@ -1598,7 +1597,7 @@ abbr::after {
   height: 0;
   margin-bottom: 0px;
   padding: 0;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.87);
   overflow: hidden;
 }
 .accordion a {
@@ -1607,7 +1606,7 @@ abbr::after {
   padding: 5px;
   line-height: 1.75em;
   background-color: #555555;
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
   text-decoration: none;
   text-align: center;
   border-bottom: 1px solid #525252;
@@ -1621,7 +1620,7 @@ abbr::after {
   opacity: .9;
 }
 .accordion a:active {
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.87);
   background-color: #626262;
 }
 .accordion :target + p {
