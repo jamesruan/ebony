@@ -1362,7 +1362,7 @@ th {
   color: rgba(0, 0, 0, 0.64);
   background-color: #e9e9e9;
   text-align: center;
-  text-spacing: 0.1em;
+  letter-spacing: 0.1em;
 }
 table tr:first-child th:first-child {
   -webkit-border-top-left-radius: 5px;
