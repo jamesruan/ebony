@@ -649,7 +649,7 @@ h6 {
   font-family: "Ubuntu", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   font-style: normal;
   /* heading are usually big enough. so use lesser color to avoid too strong feeling */
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.64);
   line-height: 1em;
   margin: 1.5em 1rem 0.5em;
   letter-spacing: .1em;
@@ -690,7 +690,7 @@ h4 small,
 h5 small,
 h6 small {
   font-size: 75%;
-  color: rgba(255, 255, 255, 0.54);
+  color: rgba(255, 255, 255, 0.64);
 }
 h1 a,
 h2 a,
@@ -725,10 +725,10 @@ a[href].new-window::after {
   padding-right: .2em;
 }
 a:hover {
-  color: rgba(255, 255, 255, 0.54);
+  color: rgba(255, 255, 255, 0.64);
 }
 a:focus {
-  color: rgba(255, 255, 255, 0.54);
+  color: rgba(255, 255, 255, 0.64);
   outline: none;
 }
 p {
@@ -1359,8 +1359,10 @@ th {
   text-align: left;
 }
 th {
+  color: rgba(255, 255, 255, 0.64);
   background-color: #383838;
   text-align: center;
+  text-spacing: 0.1em;
 }
 table tr:first-child th:first-child {
   -webkit-border-top-left-radius: 5px;
