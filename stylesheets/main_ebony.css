@@ -1638,13 +1638,13 @@ abbr::after {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 /* Media query for bigscreen - make the font large */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 80rem) {
   .grid {
     max-width: 75vw;
   }
 }
 /* Media query for 960 Screens - sets nested grids to 100% */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 60rem) {
   .c1,
   .c2,
   .c3,
@@ -1661,7 +1661,7 @@ abbr::after {
   .c12,
   .c1-5,
   .c1-8 {
-    padding: 0 10px;
+    padding: 0 0.6rem;
   }
   .row .row .c1,
   .row .row .c2,
@@ -1680,12 +1680,16 @@ abbr::after {
   .row .row .c1-5,
   .row .row .c1-8 {
     width: 100%;
-    margin-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-bottom: 1.2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
   }
   .row .row > div:last-child {
     margin-bottom: 0 !important;
+  }
+  article.row img {
+    max-height: 60vh;
+    max-width: 45vw;
   }
 }
 @media print {
@@ -1694,7 +1698,7 @@ abbr::after {
   }
 }
 /* Media query for small tablets */
-@media handheld, only screen and (max-width: 600px), only screen and (max-device-width: 600px) and (orientation: portrait) {
+@media handheld, only screen and (max-width: 40rem), only screen and (max-device-width: 40rem) and (orientation: portrait) {
   html {
     font-size: 80%;
   }
@@ -1718,10 +1722,10 @@ abbr::after {
   .c1-5,
   .c1-8 {
     width: 100%;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 20px;
-    padding: 0 10px;
+    margin-bottom: 1.2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    padding: 0 0.6rem;
   }
   .c1.first,
   .c2.first,
@@ -1738,7 +1742,7 @@ abbr::after {
   .c-golder-large.first,
   .c1-5.first,
   .c1-8.first {
-    padding-left: 10px;
+    padding-left: 0.6rem;
     position: relative;
   }
   .c1.last,
@@ -1756,8 +1760,12 @@ abbr::after {
   .c-golder-large.last,
   .c1-5.last,
   .c1-8.last {
-    padding-right: 10px;
+    padding-left: 0.6rem;
     position: relative;
+  }
+  article.row img {
+    max-height: 80vh;
+    max-width: 60vw;
   }
 }
 /*# sourceMappingURL=main_ebony.css.map */
