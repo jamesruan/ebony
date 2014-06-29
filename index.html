@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link id="main_css" rel="stylesheet" href="stylesheets/main_ebony.css" media="all">
-<link id="index_css" rel="stylesheet" href="stylesheets/index_ebony.css" media="all">
+<link id="index_css" rel="stylesheet" href="stylesheets/index.css" media="all">
 
 <script type="text/javascript" src="javascripts/bundle.min.js"></script>
 <script type="text/javascript">
@@ -16,11 +16,21 @@ $(document).ready(function() {
         $(".emoji_list").load("emoji.html");
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
         });
+function toggle_theme(){
+    var ebony = "stylesheets/main_ebony.css";
+    var ivory = "stylesheets/main_ivory.css";
+    var $ = require('jquery');
+    if($("#main_css").attr("href") === ebony){
+        $("#main_css").attr("href", ivory);
+    }else{
+        $("#main_css").attr("href", ebony);
+    }
+}
 </script>
 </head>
 <body style="">
 <div class="row">
-    <h1 class="text-center">IVORY FRAMEWORK MODIFIED</h1>
+    <h2 class="text-center">EBONY: IVORY FRAMEWORK MODIFIED</h1>
     <br>
 </div>
 <div class="content">
@@ -43,7 +53,7 @@ $(document).ready(function() {
                     </li>
                     <li>An emoji font type from <a href="http://emojisymbols.com/" class="new-window" target="blank">emoji symbols</a> 
                     </li>
-                    <li>Color themes of a white and black style.</li>
+                    <li>Color themes of a white and black style.<a href="javascript: toggle_theme();">更换主题</a></li>
                 </ul>
             </article>
             <h3 class="text-center">FLUID GRID LAYOUT<br /> WIDTH 960PX DEFAULT FOR 1280PX SCREEN</h3>
