@@ -1067,7 +1067,7 @@ Escape
 Str = a:Normal_char+
 {return mkStr(a.join(""));}
 
-Endline =  a:Line_break {return a;}/ Newline {return undefined;}
+Endline =  a:Line_break {return a;}/ Newline {return " ";}
 
 Line_break = ("  " _ Newline / ( _ "\\newline" / "[newline]" ) _ Newline?)
 {return ["br"];}
