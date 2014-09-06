@@ -452,7 +452,7 @@ TeX_Code_end
 = BLSP "\\" Code_tag "+"? BLSP "{end}" BLSP
 
 Code_option
-=("c"i /"cxx"i /"cc"i /"cpp"i / "c++"i) {return "cpp";}
+="css"i {return "css";}
 /("cs"i /"c#"i) {return "cs";}
 /"json"i {return "json";}
 /("js"i /"javascript"i) {return "javascript";}
@@ -463,7 +463,6 @@ Code_option
 /"xhtml"i {return "xhtml";}
 /"http"i {return "http";}
 /"xml"i {return "xml";}
-/"css"i {return "css";}
 /"sql"i {return "sql";}
 /("cv"i /"py"i /"python"i) {return "python";}
 /("pm"i /"pl"i /"perl"i) {return "perl";}
@@ -475,6 +474,7 @@ Code_option
 /"go"i {return "go";}
 /"scala"i {return "scala";}
 /("cl"i /"el"i /"lisp"i /"lsp"i /"scm"i /"ss"i /"rkt"i) {return "lisp";}
+/("c"i /"cxx"i /"cc"i /"cpp"i / "c++"i) {return "cpp";}
 /("erlang"i /"erl") {return "erlang";}
 
 
