@@ -454,28 +454,30 @@ TeX_Code_end
 Code_option
 ="css"i {return "css";}
 /("cs"i /"c#"i) {return "cs";}
-/"json"i {return "json";}
-/("js"i /"javascript"i) {return "javascript";}
-/"coffee"i {return "coffeescript";}
-/"java"i {return "java";}
-/"php"i {return "php";}
-/("htm"i /"html"i) {return "html";}
-/"xhtml"i {return "xhtml";}
-/"http"i {return "http";}
-/"xml"i {return "xml";}
-/"sql"i {return "sql";}
 /("cv"i /"py"i /"python"i) {return "python";}
-/("pm"i /"pl"i /"perl"i) {return "perl";}
-/("rb"i /"ruby"i) {return "ruby";}
-/"lua"i {return "lua";}
-/("r"i /"s"i/ "splus"i) {return "r";}
-/("m"i /"matlab"i) {return "matlab";}
-/"tex"i {return "tex";}
-/"go"i {return "go";}
-/"scala"i {return "scala";}
 /("cl"i /"el"i /"lisp"i /"lsp"i /"scm"i /"ss"i /"rkt"i) {return "lisp";}
 /("c"i /"cxx"i /"cc"i /"cpp"i / "c++"i) {return "cpp";}
+/"coffee"i {return "coffeescript";}
 /("erlang"i /"erl") {return "erlang";}
+/"go"i {return "go";}
+/("htm"i /"html"i) {return "html";}
+/"lua"i {return "lua";}
+/("m"i /"matlab"i) {return "matlab";}
+/"http"i {return "http";}
+/("haskell"i /"hs"i) {return "haskell";}
+/"json"i {return "json";}
+/("js"i /"javascript"i) {return "javascript";}
+/"java"i {return "java";}
+/"php"i {return "php";}
+/("pm"i /"pl"i /"perl"i) {return "perl";}
+/("rb"i /"ruby"i) {return "ruby";}
+/("r"i /"s"i/ "splus"i) {return "r";}
+/"scala"i {return "scala";}
+/"swift"i {return "swift";}
+/"sql"i {return "sql";}
+/"tex"i {return "tex";}
+/"xhtml"i {return "xhtml";}
+/"xml"i {return "xml";}
 
 
 
