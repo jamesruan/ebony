@@ -4,7 +4,7 @@
   "description": "Ebony Framework",
   "main": "index.html",
   "dependencies": {
-    "highlight.js": "~8.0.0",
+    "highlight.js": "^8.0.0",
     "jquery": "^2.1.0",
     "pegjs": "^0.8.0",
     "json-stringify-safe": "^5.0.0",
