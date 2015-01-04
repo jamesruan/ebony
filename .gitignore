@@ -1,4 +1,6 @@
 node_modules
 bower_components
+javascripts/bundle.min.js
+stylesheets/highlight
 *.css.map
 *.sh
