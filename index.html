@@ -11,7 +11,7 @@
 <script type="text/javascript" src="javascripts/bundle.min.js"></script>
 <script type="text/javascript">
 $=require('jquery');
-hljs=require('highlight.js');
+hljs=require('hljs');
 $(document).ready(function() {
         $(".emoji_list").load("emoji.html");
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
@@ -44,10 +44,6 @@ function toggle_theme(){
                     <li>A CSS normalization forked from <a href="http://necolas.github.io/normalize.css/" class="new-window" target="blank">normalize.css</a>;</li>
                     <li>A newly developed <a href="ml.html" class="new-window" target="blank">Markup Language</a>;</li>
                     <li>A syntax highlighter from <a href="http://highlightjs.org/" class="new-window" target="blank">highlight.js</a> 
-                    </li>
-                    <li>A MVVC library from <a href="http://knockoutjs.com/" class="new-window" target="blank">knockout</a> 
-                    </li>
-                    <li>A evented js library from <a href="http://www.sammyjs.org/" class="new-window" target="blank">Sammy.js</a> 
                     </li>
                     <li>An icon font type from <a href="http://glyphicons.com/" class="new-window" target="blank">glyphicons</a> provided as a part of <a href="http://getbootstrap.com/" class="new-window" target="blank">bootstrap</a> 
                     </li>
