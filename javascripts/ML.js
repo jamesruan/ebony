@@ -2,8 +2,7 @@ var ML = function(){
     function render(text, targetDOM, messageDOM, return_type, ast){
         var $ = require('jquery');
         var grammar = require('grammar');
-        var hljs = require('highlight.js');
-        var stringify = require('json-stringify-safe');
+        var hljs = require('hljs');
         require('jsml-jquery');
 
         function buildErrorMessage(e){
@@ -41,7 +40,7 @@ var ML = function(){
         }
         try{
             if(ast){
-                ast.text(stringify(parsed));
+                ast.text(parsed);
             }
             if(targetDOM){
                 targetDOM.jsml(parsed);

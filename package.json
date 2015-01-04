@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "description": "Ebony Framework",
   "main": "index.html",
-  "dependencies": {
-    "highlight.js": "^8.0.0",
-    "jquery": "^2.1.0",
-    "pegjs": "^0.8.0",
-    "json-stringify-safe": "^5.0.0",
-    "jsml-jquery": "^0.1.1",
-    "knockout": "^3.1.0"
-  },
+  "dependencies": {},
+  "devDependencies": [
+    "pegjs >= 0.8.0",
+    "less >= 2.2.0",
+    "uglify-js >= 2.4.16",
+    "browserify >= 0.8.3",
+    "http-server >= 0.7.4",
+    "bower >= 1.3.12"]
+  ,
   "scripts": {
-    "preinstall": "npm install -g pegjs less uglify-js browserify http-server",
+    "preinstall": "npm install -g pegjs less uglify-js browserify http-server bower",
     "test": "http-server"
   },
   "repository": {
