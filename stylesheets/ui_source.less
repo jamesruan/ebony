@@ -579,10 +579,7 @@ abbr::after {
     width: 100%;
     padding: 1px 0;
 }
-.tab-container .tab-radio {
-    display: none;
-}
-.tab-container .tab {
+.tab-container .tab-title {
     display: block;
     float: left;
     position: relative;
@@ -601,19 +598,19 @@ abbr::after {
     line-height: 1.75em;
     .font-family-sans();
 }
-.tab-container .tab-radio:checked ~ .tab,
-.tab-container .tab-radio:active ~ .tab {
-    background-color: @color-bg;
-    z-index: 100;
-    border-bottom: 1px solid @color-bg;
+.tab-container a:hover {
+	opacity: 0.9;
 }
-.tab-container .tab-radio:checked ~ .tab {
+.tab-container a.selected:hover {
+	opacity: 1;
+}
+.tab-container a.selected,
+.tab-container a.tab-title:active {
     background-color: @color-bg;
-    color: @color-front-normal;
+    border-bottom: 1px solid @color-bg;
 }
 .tab-container .tab-page
 {
-    visibility: hidden;
     width: 100%;
     height: auto;
     font-size: 1em;
@@ -632,11 +629,6 @@ abbr::after {
     border-bottom-right-radius: 5px;
     .box-shadow(0 1px 1px rgba(0,0,0,.1));
 }
-.tab-container .tab-radio:checked ~ .tab-page {
-    visibility: visible;
-    display: block;
-    height: auto
-}
 /* ---- Accordion ---- */
 .accordion {
     width: 100%;
@@ -647,15 +639,18 @@ abbr::after {
     .border-radius(5px);
 }
 .accordion p {
-    height: 0;
-    margin-bottom: 0px;
-    padding: 0;
+    margin: 0 2px;
+    padding: 10px 15px;
+    height: auto;
+    .border-radius(5px);
+    .box-shadow( 0 1px 1px rgba(0,0,0,.3));
     color: @color-front-normal;
     overflow: hidden;
 }
 .accordion a {
     display: block;
     height: auto;
+    margin: 5px;
     padding: 5px;
     line-height: 1.75em;
     background-color: @color-button-bg;
@@ -672,11 +667,4 @@ abbr::after {
 .accordion a:active {
     color: @color-front-normal;
     background-color: @color-button-active-bg;
-}
-.accordion :target + p {
-    margin: 0 2px;
-    padding: 10px 15px;
-    height: auto;
-    .border-radius(5px);
-    .box-shadow( 0 1px 1px rgba(0,0,0,.3));
 }

@@ -1525,10 +1525,7 @@ abbr::after {
   width: 100%;
   padding: 1px 0;
 }
-.tab-container .tab-radio {
-  display: none;
-}
-.tab-container .tab {
+.tab-container .tab-title {
   display: block;
   float: left;
   position: relative;
@@ -1547,18 +1544,18 @@ abbr::after {
   line-height: 1.75em;
   font-family: "Ubuntu", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
-.tab-container .tab-radio:checked ~ .tab,
-.tab-container .tab-radio:active ~ .tab {
+.tab-container a:hover {
+  opacity: 0.9;
+}
+.tab-container a.selected:hover {
+  opacity: 1;
+}
+.tab-container a.selected,
+.tab-container a.tab-title:active {
   background-color: #2d2d2d;
-  z-index: 100;
   border-bottom: 1px solid #2d2d2d;
 }
-.tab-container .tab-radio:checked ~ .tab {
-  background-color: #2d2d2d;
-  color: rgba(255, 255, 255, 0.87);
-}
 .tab-container .tab-page {
-  visibility: hidden;
   width: 100%;
   height: auto;
   font-size: 1em;
@@ -1579,11 +1576,6 @@ abbr::after {
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-.tab-container .tab-radio:checked ~ .tab-page {
-  visibility: visible;
-  display: block;
-  height: auto;
-}
 /* ---- Accordion ---- */
 .accordion {
   width: 100%;
@@ -1597,15 +1589,23 @@ abbr::after {
   background-clip: padding-box;
 }
 .accordion p {
-  height: 0;
-  margin-bottom: 0px;
-  padding: 0;
+  margin: 0 2px;
+  padding: 10px 15px;
+  height: auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   color: rgba(255, 255, 255, 0.87);
   overflow: hidden;
 }
 .accordion a {
   display: block;
   height: auto;
+  margin: 5px;
   padding: 5px;
   line-height: 1.75em;
   background-color: #555555;
@@ -1625,18 +1625,6 @@ abbr::after {
 .accordion a:active {
   color: rgba(255, 255, 255, 0.87);
   background-color: #626262;
-}
-.accordion :target + p {
-  margin: 0 2px;
-  padding: 10px 15px;
-  height: auto;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 /* Media query for bigscreen - make the font large */
 @media only screen and (min-width: 80rem) {

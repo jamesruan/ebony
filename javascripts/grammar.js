@@ -34,7 +34,7 @@ module.exports = (function() {
 
         peg$c0 = [],
         peg$c1 = peg$FAILED,
-        peg$c2 = function(a) {return gen_tag(a,"article",{"class":"row"});},
+        peg$c2 = function(a) {return gen_tag(a,"article",{"class":"row ml-article"});},
         peg$c3 = function() {return undefined;},
         peg$c4 = function(t, a) {
         	var attr;

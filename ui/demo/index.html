@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html ng-app="ebony.demo">
+<head>
+<title>IVORY Framework</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link id="main_css" rel="stylesheet" href="/ebony/stylesheets/main_ebony.css" media="all">
+<link id="index_css" rel="stylesheet" href="/ebony/stylesheets/index.css" media="all">
+
+<script type="text/javascript" src="ebony/javascripts/bundle.min.js"></script>
+<script type="text/javascript" src="ebony/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="ebony/ui/javascripts/ebony.js"></script>
+<script type="text/javascript" src="ebony/ui/javascripts/accordion.js"></script>
+<script type="text/javascript" src="ebony/ui/javascripts/tabs.js"></script>
+<script type="text/javascript" src="javascripts/demo.js"></script>
+<body>
+	<div id="content" class="grid">
+		<div class="row space-top space-bot" ng-controller="AccordionDemoController">
+			<accordion>
+				<accordion-group title="Static Title" is-open="true">
+					<p>Static content</p>
+				</accordion-group>
+				<accordion-group ng-repeat="group in groups">
+					<accordion-title>{{group.title}}</accordion-title>
+					<p>{{group.content}}</p>
+				</accordion-group>
+			</accordion>
+		</div>
+		<div class="row space-top space-bot" ng-controller="TabsDemoController">
+			<tabs>
+				<tab title="Static Title">
+					<p>Static content</p>
+				</tab>
+				<tab ng-repeat="group in groups">
+					<tab-title>{{group.title}}</tab-title>
+					<p>{{group.content}}</p>
+				</tab>
+			</tabs>
+		</div>
+	</div>
+</body>
+</html>

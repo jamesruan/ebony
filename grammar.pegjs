@@ -122,7 +122,7 @@ start
 
 Blocks
 = a:Block+
-{return gen_tag(a,"article",{"class":"row"});}
+{return gen_tag(a,"article",{"class":"row ml-article"});}
 
 Block
 = Blank_line BLSP
