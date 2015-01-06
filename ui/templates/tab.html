@@ -1,4 +1,4 @@
 <section>
-	<a href="" class="tab-title" ng-click="select()" tab-transclude="title" ng-class="{selected: isSelected}">{{title}}</a>
-	<div class="tab-page" ng-transclude ng-show="isSelected"></div>
+	<a href="" class="tab-title" ng-click="select()" tab-title-transclude="title" ng-class="{selected: isSelected}">{{title}}</a>
+	<div class="tab-page" ng-transclude ng-show="isSelected" tab-content-transclude="content">{{content}}</div>
 </section>

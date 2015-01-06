@@ -10,6 +10,9 @@
 
 <script type="text/javascript" src="javascripts/bundle.min.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="ui/javascripts/ebony.js"></script>
+<script type="text/javascript" src="ui/javascripts/accordion.js"></script>
+<script type="text/javascript" src="ui/javascripts/tabs.js"></script>
 <script type="text/javascript">
 $=require('jquery');
 hljs=require('hljs');
@@ -23,7 +26,7 @@ function toggle_theme(){
         $("#main_css").attr("href", ebony);
     }
 }
-var app=angular.module('Presentation', [])
+var app=angular.module('Presentation', ["ebony"])
 .controller('IndexController', ['$scope', function($scope) {
   $scope.templates =
     { 'intro': 'presentation/intro.html', 

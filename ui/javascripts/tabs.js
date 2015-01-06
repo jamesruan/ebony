@@ -34,10 +34,8 @@ angular.module('ebony.tabs', [])
 	return {
 		require: '^tabs',
 		restrict: 'E',
-		scope: {
-			title: '@',
-		},
 		transclude: true,
+		scope: {},
 		replace: true,
 		templateUrl: 'ebony/ui/templates/tab.html',
 		link: function(scope, element, attr, tabsCtrl){
@@ -50,6 +48,10 @@ angular.module('ebony.tabs', [])
 		controller: function(){
 			this.setTitle = function(element){
 				this.title = element;
+			};
+
+			this.setContent = function(element){
+				this.content = element;
 			};
 		}
 	};
@@ -66,17 +68,45 @@ angular.module('ebony.tabs', [])
 		}
 	};
 })
-.directive('tabTransclude', function(){
+.directive('tabContent', function(){
+	return {
+		require: '^tab',
+		restrict: 'E',
+		transclude: true,
+		template: '',
+		replace: true,
+		link: function(scope, element, attr, tabCtrl, transclude){
+			tabCtrl.setContent(transclude(scope, function(){}));
+		}
+	};
+})
+.directive('tabTitleTransclude', function(){
 	return {
 		require: '^tab',
 		restrict: 'A',
 		link: function(scope, element, attr, controller){
 			scope.$watch( function(){
-				return controller[attr.tabTransclude];
+				return controller[attr.tabTitleTransclude];
 			}, function(title){
 				if(title){
 					element.html('');
 					element.append(title);
+				}
+			});
+		}
+	};
+})
+.directive('tabContentTransclude', function(){
+	return {
+		require: '^tab',
+		restrict: 'A',
+		link: function(scope, element, attr, controller){
+			scope.$watch( function(){
+				return controller[attr.tabContentTransclude];
+			}, function(content){
+				if(content){
+					element.html('');
+					element.append(content);
 				}
 			});
 		}

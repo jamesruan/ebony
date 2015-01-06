@@ -30,12 +30,17 @@
 		</div>
 		<div class="row space-top space-bot" ng-controller="TabsDemoController">
 			<tabs>
-				<tab title="Static Title">
-					<p>Static content</p>
+				<tab>
+					<tab-title>Static Title</tab-title>
+					<tab-content>
+						<p>Static content</p>
+					</tab-content>
 				</tab>
 				<tab ng-repeat="group in groups">
 					<tab-title>{{group.title}}</tab-title>
-					<p>{{group.content}}</p>
+					<tab-content>
+						<p>{{group.content}}</p>
+					</tab-content>
 				</tab>
 			</tabs>
 		</div>
