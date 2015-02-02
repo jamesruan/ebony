@@ -25,6 +25,7 @@ then (on linux)
 
 or you may need manually build EBONY
 
+
 use:
 
     npm test
@@ -35,18 +36,17 @@ to run a test server.
 
 Usage: 
 
-The \*.less file is complied into css file.
+The ebony/ui is an angular based components library under development.
 
-Javascript libraries are bundled and minified into bundle.min.js.
+Start a http-server under ebony/ui/demo to see it's performance.
 
-    
-    var $ = require('jquery');  //jquery
-    var grammar = require('grammar');   //low level ML parser and JSML generator
-    require('jsml-jquery');     //load the jquery-plugin, for render JSML into HTML
-    var hljs = require('highlight.js'); //stand alone highlight.js
+Currently, it is needed to include following javascript files in the HTML to use the UI library:
 
-    var ML = require('ML');     //for rendering ML file. And an external MathML js file should be loaded to render Math Symbols.
+	ebony/javascripts/bundle.min.js                  // everything other of other part of ebony bundled.
+	ebony/bower_components/angular/angular.min.js    // angular main js.
+	ebony/ui/javascripts/ebony.js                    // the main UI js.
+	ebony/ui/javascripts/accordion.js                // the accordion components.	
+	ebony/ui/javascripts/tabs.js                     // the tabs components.	
+	// your javascript file here.
 
-    var ko = require('knockout');   //MVVC framework
-
-    require('Sammy');   //load the Sammy event driven library.
+Upon completion, the last three javascripts would be bundled together.
