@@ -1,0 +1,134 @@
+/* ---- GRID Layout ---- */
+.l_no-padding-l {
+    padding-left: 0;
+}
+.l_no-padding-r {
+    padding-right: 0;
+}
+.l_no-padding-t {
+    padding-top: 0;
+}
+.l_no-padding-b {
+    padding-bottom: 0;
+}
+.l_padding-l {
+    padding-left: 0.5rem;
+}
+.l_padding-r {
+    padding-right: 0.5rem;
+}
+.l_padding-t {
+    padding-top: 0.5rem;
+}
+.l_padding-b {
+    padding-bottom: 0.5rem;
+}
+.l_padding-all{
+	padding: 0.5rem;
+}
+.l_padding-h-l {
+    padding-left: 0.25rem;
+}
+.l_padding-h-r {
+    padding-right: 0.25rem;
+}
+.l_padding-h-t {
+    padding-top: 0.25rem;
+}
+.l_padding-h-b {
+    padding-bottom: 0.25rem;
+}
+.l_padding-h-all{
+	padding: 0.25rem;
+}
+/* Column Offsets */
+.generate_col_offset();
+.generate_col_offset_n(5);
+.generate_col_offset_n(8);
+
+/* ---- Clearfixes ---- */
+.l_clearfix {
+    *zoom:1;
+	&:before,
+	&:after {
+    	content: '';
+    	display: table;
+    	line-height: 0;
+	};
+	&:after {
+    	clear: both
+	};
+}
+
+/* ---- Alignments ---- */
+.l_centered {
+    float: none !important;
+    margin: auto;
+}
+.l_left {
+    float: left;
+}
+.l_right {
+    float: right;
+}
+.l_text-left {
+    text-align: left;
+}
+.l_text-right {
+    text-align: right;
+}
+.l_text-center {
+    text-align: center;
+}
+.l_text-justify {
+    text-align: justify;
+}
+.l_space-l {
+    margin-left: 1rem;
+}
+.l_space-r {
+    margin-right: 1rem;
+}
+.l_space-t {
+    margin-top: 1rem;
+}
+.l_space-b {
+    margin-bottom: 1rem;
+}
+.l_space-all {
+	margin: 1rem;
+}
+.l_space-h-l {
+    margin-left: 0.5rem;
+}
+.l_space-h-r {
+    margin-right: 0.5rem;
+}
+.l_space-h-t {
+    margin-top: 0.5rem;
+}
+.l_space-h-b {
+    margin-bottom: 0.5rem;
+}
+.l_space-h-all {
+	margin: 0.5rem;
+}
+/* ---- Lists ---- */
+ul.ul_square {
+    lult-style-type: square;
+}
+ul.ul_circle {
+    lult-style-type: circle;
+}
+ul.ul_dulc {
+    lult-style-type: dulc;
+}
+ul.ul_no-bullet {
+    lult-style: none;
+}
+ul.ul_square li ul,
+ul.ul_circle li ul,
+ul.ul_dulc li ul,
+ul.ul_no-bullet li ul {
+    margin-left: 1em;
+}

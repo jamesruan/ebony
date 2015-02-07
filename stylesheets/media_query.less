@@ -1,0 +1,183 @@
+/* Media query for bigscreen - make the font large */
+@media only screen and (min-width: 80rem)
+{
+	html {
+		font-size: 1.33vw;
+	}
+    .l_grid {
+        max-width: 70vw;
+    }
+}
+/* Media query for 960 Screens - sets nested grids to 100% */
+@media only screen and (max-width:60rem) {
+    .l_c1,
+    .l_c2,
+    .l_c3,
+    .l_c4,
+    .l_c5,
+    .l_c6,
+    .l_c7,
+    .l_c8,
+    .l_c9,
+    .l_c10,
+    .l_c11,
+    .l_c12,
+    .l_c-golden-small,
+    .l_c-golden-large,
+    .l_c1-5,
+    .l_c2-5,
+    .l_c3-5,
+    .l_c4-5,
+    .l_c1-8,
+    .l_c2-8,
+    .l_c3-8,
+    .l_c4-8,
+    .l_c5-8,
+    .l_c6-8,
+    .l_c7-8 {
+        padding: 0 0.6rem;
+    }
+	.l_row .l_row {
+    	.l_c1,
+    	.l_c2,
+    	.l_c3,
+    	.l_c4,
+    	.l_c5,
+    	.l_c6,
+    	.l_c7,
+    	.l_c8,
+    	.l_c9,
+    	.l_c10,
+    	.l_c11,
+    	.l_c12,
+    	.l_c-golden-small,
+    	.l_c-golden-large,
+    	.l_c1-5,
+    	.l_c2-5,
+    	.l_c3-5,
+    	.l_c4-5,
+    	.l_c1-8,
+    	.l_c2-8,
+    	.l_c3-8,
+    	.l_c4-8,
+    	.l_c5-8,
+    	.l_c6-8,
+    	.l_c7-8 {
+        	width: 100%;
+        	margin-bottom: 1.2rem;
+        	margin-left: 0.3rem;
+        	margin-right: 0.3rem;
+    	};
+	}
+    article.l_row img{
+        max-height: 60vh;
+        max-width: 45vw;
+    }
+}
+@media print{
+    html {
+        font-size: 80%;
+    }
+}
+/* Media query for small tablets */
+@media handheld, 
+only screen and (max-width: 40rem),
+only screen and (max-device-width: 40rem) and (orientation:portrait) {
+    html {
+        font-size: 80%;
+    }
+    .l_row {
+        margin-bottom:0!important;
+    }
+    .l_c1,
+    .l_c2,
+    .l_c3,
+    .l_c4,
+    .l_c5,
+    .l_c6,
+    .l_c7,
+    .l_c8,
+    .l_c9,
+    .l_c10,
+    .l_c11,
+    .l_c12,
+    .l_c-golden-small,
+    .l_c-golden-large,
+    .l_c1-5,
+    .l_c2-5,
+    .l_c3-5,
+    .l_c4-5,
+    .l_c1-8,
+    .l_c2-8,
+    .l_c3-8,
+    .l_c4-8,
+    .l_c5-8,
+    .l_c6-8,
+    .l_c7-8 {
+        width: 100%;
+        margin-bottom: 1.2rem;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        padding: 0 0.6rem;
+    }
+    .l_c1.l_col_first,
+    .l_c2.l_col_first,
+    .l_c3.l_col_first,
+    .l_c4.l_col_first,
+    .l_c5.l_col_first,
+    .l_c6.l_col_first,
+    .l_c7.l_col_first,
+    .l_c8.l_col_first,
+    .l_c9.l_col_first,
+    .l_c10.l_col_first,
+    .l_c11.l_col_first,
+    .l_c12.l_col_first,
+    .l_c-golden-small.l_col_first,
+    .l_c-golden-large.l_col_first,
+    .l_c1-5.l_col_first,
+    .l_c2-5.l_col_first,
+    .l_c3-5.l_col_first,
+    .l_c4-5.l_col_first,
+    .l_c1-8.l_col_first,
+    .l_c2-8.l_col_first,
+    .l_c3-8.l_col_first,
+    .l_c4-8.l_col_first,
+    .l_c5-8.l_col_first,
+    .l_c6-8.l_col_first,
+    .l_c7-8.l_col_first {
+        padding-left: 0.6rem;
+        position: relative;
+    }
+    .l_c1.l_col_last,
+    .l_c2.l_col_last,
+    .l_c3.l_col_last,
+    .l_c4.l_col_last,
+    .l_c5.l_col_last,
+    .l_c6.l_col_last,
+    .l_c7.l_col_last,
+    .l_c8.l_col_last,
+    .l_c9.l_col_last,
+    .l_c10.l_col_last,
+    .l_c11.l_col_last,
+    .l_c12.l_col_last,
+    .l_c-golden-small.l_col_last,
+    .l_c-golden-large.l_col_last,
+    .l_c1-5.l_col_last,
+    .l_c2-5.l_col_last,
+    .l_c3-5.l_col_last,
+    .l_c4-5.l_col_last,
+    .l_c1-8.l_col_last,
+    .l_c2-8.l_col_last,
+    .l_c3-8.l_col_last,
+    .l_c4-8.l_col_last,
+    .l_c5-8.l_col_last,
+    .l_c6-8.l_col_last,
+    .l_c7-8.l_col_last {
+        padding-left: 0.6rem;
+        position: relative;
+    }
+    article.l_row img{
+        max-height: 80vh;
+        max-width: 60vw;
+    }
+}

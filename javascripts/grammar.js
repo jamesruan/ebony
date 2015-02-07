@@ -34,16 +34,16 @@ module.exports = (function() {
 
         peg$c0 = [],
         peg$c1 = peg$FAILED,
-        peg$c2 = function(a) {return gen_tag(a,"article",{"class":"row ml-article"});},
+        peg$c2 = function(a) {return gen_tag(a,"article",{"class":"l_row ml-article"});},
         peg$c3 = function() {return undefined;},
         peg$c4 = function(t, a) {
         	var attr;
         	if(t === ".")
-        		attr = {"class":"text-center"};
+        		attr = {"class":"l_text-center"};
         	else if(t === ">")
-        		attr = {"class":"text-right"};
+        		attr = {"class":"l_text-right"};
         	else
-        		attr = {"class":"text-left"};
+        		attr = {"class":"l_text-left"};
 
         	return gen_tag(a, "figure", attr);
         },
@@ -62,11 +62,11 @@ module.exports = (function() {
         peg$c17 = function(t, a) {
         	var attr;
         	if(t === ".")
-        		attr = {"class":"text-center"};
+        		attr = {"class":"l_text-center"};
         	else if(t === ">")
-        		attr = {"class":"text-right"};
+        		attr = {"class":"l_text-right"};
         	else
-        		attr = {"class":"text-left"};
+        		attr = {"class":"l_text-left"};
         	return gen_tag(a, "figure", attr);
         },
         peg$c18 = "\\",
@@ -80,11 +80,11 @@ module.exports = (function() {
         peg$c26 = function(f, a) {
         	var attr;
         	if(f === "<")
-        		attr={"src":a, "class":"left"};
+        		attr={"src":a, "class":"l_left"};
         	else if(f === ">")
-        		attr={"src":a, "class":"right"};
+        		attr={"src":a, "class":"l_right"};
         	else
-        		attr={"src":a, "class":"centered"};
+        		attr={"src":a, "class":"l_centered"};
         	return gen_tag([], "img", attr);
         },
         peg$c27 = /^[<>]/,
@@ -297,9 +297,9 @@ module.exports = (function() {
         peg$c199 = function(o, a) {
         	var attr;
         	if(o)
-        		attr={"class":"alert"+" "+o};
+        		attr={"class":"alert", "data-type":o};
         	else
-        		attr={"class":"alert"};
+        		attr={"class":"alert", "data-type":"alert"};
         	return gen_tag(a, "alert", attr);
         },
         peg$c200 = function(o) {return o;},
@@ -392,7 +392,7 @@ module.exports = (function() {
         peg$c253 = { type: "literal", value: "toanchor", description: "\"toanchor\"" },
         peg$c254 = function(to, a) {
         	var attr={"href":a};
-        	var attrb={"href":a, "class":"new-window", "target":"blank"};
+        	var attrb={"href":a, "class":"is_new-window", "target":"blank"};
         	if(to.t){
         		if(to.o)
         			return gen_tag(to.o, "href", attrb);
@@ -409,7 +409,7 @@ module.exports = (function() {
         peg$c255 = function(t, o) {return {"t":t ,"o":o};},
         peg$c256 = function(to, a) {
         	var attr={"href":a};
-        	var attrb={"href":a, "class":"new-window", "target":"blank"};
+        	var attrb={"href":a, "class":"is_new-window", "target":"blank"};
         	if(to.t){
         		if(to.o)
         			return gen_tag(to.o, "href", attrb);

@@ -122,7 +122,7 @@ start
 
 Blocks
 = a:Block+
-{return gen_tag(a,"article",{"class":"row ml-article"});}
+{return gen_tag(a,"article",{"class":"l_row ml-article"});}
 
 Block
 = Blank_line BLSP
@@ -152,11 +152,11 @@ BBC_Figure
 {
 	var attr;
 	if(t === ".")
-		attr = {"class":"text-center"};
+		attr = {"class":"l_text-center"};
 	else if(t === ">")
-		attr = {"class":"text-right"};
+		attr = {"class":"l_text-right"};
 	else
-		attr = {"class":"text-left"};
+		attr = {"class":"l_text-left"};
 
 	return gen_tag(a, "figure", attr);
 }
@@ -177,11 +177,11 @@ TeX_Figure
 {
 	var attr;
 	if(t === ".")
-		attr = {"class":"text-center"};
+		attr = {"class":"l_text-center"};
 	else if(t === ">")
-		attr = {"class":"text-right"};
+		attr = {"class":"l_text-right"};
 	else
-		attr = {"class":"text-left"};
+		attr = {"class":"l_text-left"};
 	return gen_tag(a, "figure", attr);
 }
 
@@ -208,11 +208,11 @@ BBC_Image
 {
 	var attr;
 	if(f === "<")
-		attr={"src":a, "class":"left"};
+		attr={"src":a, "class":"l_left"};
 	else if(f === ">")
-		attr={"src":a, "class":"right"};
+		attr={"src":a, "class":"l_right"};
 	else
-		attr={"src":a, "class":"centered"};
+		attr={"src":a, "class":"l_centered"};
 	return gen_tag([], "img", attr);
 }
 
@@ -232,11 +232,11 @@ TeX_Image
 {
 	var attr;
 	if(f === "<")
-		attr={"src":a, "class":"left"};
+		attr={"src":a, "class":"l_left"};
 	else if(f === ">")
-		attr={"src":a, "class":"right"};
+		attr={"src":a, "class":"l_right"};
 	else
-		attr={"src":a, "class":"centered"};
+		attr={"src":a, "class":"l_centered"};
 	return gen_tag([], "img", attr);
 }
 
@@ -493,9 +493,9 @@ BBC_Alert
 {
 	var attr;
 	if(o)
-		attr={"class":"alert"+" "+o};
+		attr={"class":"alert", "data-type":o};
 	else
-		attr={"class":"alert"};
+		attr={"class":"alert", "data-type":"alert"};
 	return gen_tag(a, "alert", attr);
 }
 
@@ -515,9 +515,9 @@ TeX_Alert
 {
 	var attr;
 	if(o)
-		attr={"class":"alert"+" "+o};
+		attr={"class":"alert", "data-type":o};
 	else
-		attr={"class":"alert"};
+		attr={"class":"alert", "data-type":"alert"};
 	return gen_tag(a, "alert", attr);
 }
 
@@ -970,7 +970,7 @@ BBC_HRef
 = to:BBC_HRef_start a:BBC_HRef_content BBC_HRef_end
 {
 	var attr={"href":a};
-	var attrb={"href":a, "class":"new-window", "target":"blank"};
+	var attrb={"href":a, "class":"is_new-window", "target":"blank"};
 	if(to.t){
 		if(to.o)
 			return gen_tag(to.o, "href", attrb);
@@ -1004,7 +1004,7 @@ TeX_HRef
 = to:TeX_HRef_start a:TeX_HRef_content TeX_HRef_end
 {
 	var attr={"href":a};
-	var attrb={"href":a, "class":"new-window", "target":"blank"};
+	var attrb={"href":a, "class":"is_new-window", "target":"blank"};
 	if(to.t){
 		if(to.o)
 			return gen_tag(to.o, "href", attrb);

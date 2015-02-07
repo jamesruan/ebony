@@ -1,0 +1,62 @@
+
+.border-radius(@size){
+    -webkit-border-radius: @size;
+    -moz-border-radius: @size;
+    border-radius: @size;
+    background-clip: padding-box;
+}
+.box-sizing(@sizing){
+    -moz-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+.box-shadow(@shadow){
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+.transition(@trans){
+    -webkit-transition: @trans;
+    transition: @trans;
+}
+.font-family-sans(@prefer: @theme_default-font-sans){
+    font-family: @prefer, @theme_font-family-sans;
+}
+.font-family-serif(@prefer: @theme_default-font-serif){
+    font-family: @prefer, @theme_font-family-serif;
+}
+.font-family-mono(@prefer: @theme_default-font-mono){
+    font-family: @prefer, @theme_font-family-mono;
+}
+.base-font-size() {
+	font-size: @theme_default-font-size;
+}
+
+.generate_col_n(@n, @i:1) when ( @i < @n){
+	.l_c@{i}-@{n} {
+		&:extend(.l_c12 all);
+		width: @i/@n* 100%;
+	}
+	.generate_col_n(@n, @i + 1)
+}
+
+.generate_col(@i:1) when ( @i < 12){
+	.l_c@{i} {
+		&:extend(.l_c12 all);
+		width: @i/12* 100%;
+	}
+	.generate_col(@i + 1)
+}
+
+.generate_col_offset_n(@n, @i:1) when ( @i < @n){
+	.l_col_offset-@{i}-@{n} {
+		margin-left: @i/@n * 100%;
+	}
+	.generate_col_offset_n(@n, @i + 1)
+}
+
+.generate_col_offset(@i:1) when ( @i < 12){
+	.l_col_offset-@{i} {
+		margin-left: @i/12* 100%;
+	}
+	.generate_col_offset(@i + 1)
+}

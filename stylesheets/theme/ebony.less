@@ -1,0 +1,65 @@
+/* ---- WEB FONTS ----*/
+@import "../fonts/glyphicons-halflings/stylesheet.css";
+@import "../fonts/emoji-symbols/stylesheet.css";
+@import "../fonts/ubuntu/stylesheet.css";
+
+/* ---- TEXT ---- */
+
+@theme_default-font-sans: "Droid Sans";
+@theme_default-font-serif: "Droid Serif";
+@theme_default-font-mono: "Lucida Console";
+@theme_default-font-size: 18px;
+@theme_default-font: @theme_default-font-sans;
+@theme_font-heading: "Ubuntu";
+
+@theme_font-family-sans: "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+@theme_font-family-serif: "Palatino", "Palatino Linotype", "WenQuanYi Micro Hei", serif;
+@theme_font-family-mono: "Droid Sans Mono", "Courier New", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace;
+
+@theme_color-bg-normal: #2D2D2D;
+@theme_color-bg-lesser: #383838;
+@theme_color-front-normal: rgba(255,255,255,0.87);
+@theme_color-front-lesser: rgba(255,255,255,0.64);
+@theme_color-front-dim: rgba(255,255,255,0.32);
+@theme_color-accent: #29AFC5;
+@theme_color-accent-lesser: #07A54B;
+@theme_color-anchor-hover: @theme_color-front-lesser;
+@theme_color-anchor-focus: @theme_color-front-lesser;
+@theme_color-border: lighten(@theme_color-bg-lesser, 10%);
+@theme_color-border-focus: rgba(82, 168, 236, 0.8);
+@theme_color-box-shadow: rgba(82, 168, 236, 0.5);
+@theme_color-form-span-bg: @theme_color-bg-lesser;
+@theme_color-button-bg: @theme_color-bg-lesser;
+@theme_color-button-active-bg: lighten(@theme_color-button-bg, 5%);
+@theme_color-alert-normal: #C08E37;
+@theme_color-alert-normal-bg: #FCF8E3;
+@theme_color-alert-success: #468847;
+@theme_color-alert-success-bg: #DFF0D8;
+@theme_color-alert-error: #B94A48;
+@theme_color-alert-error-bg: #F2DEDE;
+@theme_color-alert-info: #267AA3;
+@theme_color-alert-info-bg: #D9EDF7;
+@theme_color-table-alter: @theme_color-bg-lesser;
+
+@import "highlight/styles/monokai.css";
+
+@theme_skin_color_default: {
+	color: @theme_color-front-normal;
+	background-color: @theme_color-bg-normal;
+};
+@theme_skin_color_lesser: {
+	color: @theme_color-front-normal;
+	background-color: @theme_color-bg-lesser;
+};
+@theme_skin_borderbox_thinborder: {
+	.border-radius(0.3rem);
+	border: thin solid @theme_color-border;
+};
+@theme_skin_borderbox_noborder: {
+	.border-radius(0.3rem);
+	border: 0;
+};
+@theme_skin_borderbox_relief: {
+	.border-radius(0.3rem);
+	.box-shadow(1px 1px 1px 1px rgba(0, 0, 0, 0.2)); 
+};
