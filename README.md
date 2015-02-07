@@ -50,3 +50,9 @@ Currently, it is needed to include following javascript files in the HTML to use
 	// your javascript file here.
 
 Upon completion, the last three javascripts would be bundled together.
+
+-----
+
+What's going on?
+ - Transition to Angular based infrastructure.
+ - Adopting link+[SMACSS]{https://smacss.com/book/} architecturing technique.
