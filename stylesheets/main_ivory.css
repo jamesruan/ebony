@@ -1042,7 +1042,7 @@ article figure {
 article img {
   *zoom: 1;
   max-height: 48vh;
-  max-width: 36vw;
+  max-width: 48vw;
   height: auto;
   width: auto;
   display: block;
@@ -1596,17 +1596,26 @@ ul.ul_no-bullet li ul {
   margin-left: 1em;
 }
 /* ---- MEDIA QUERY ---- */
+/* Media query for printing */
+@media print {
+  html {
+    font-size: 16px;
+  }
+}
 /* Media query for bigscreen - make the font large */
 @media only screen and (min-width: 80rem) {
   html {
     font-size: 1.33vw;
   }
   .l_grid {
-    max-width: 70vw;
+    max-width: 80vw;
   }
 }
-/* Media query for 960 Screens - sets nested grids to 100% */
+/* Media query for middle Screens - sets nested grids to 100% */
 @media only screen and (max-width: 60rem) {
+  html {
+    font-size: 1.66vw;
+  }
   .l_c1,
   .l_c2,
   .l_c3,
@@ -1710,18 +1719,13 @@ ul.ul_no-bullet li ul {
   }
   article.l_row img {
     max-height: 60vh;
-    max-width: 45vw;
-  }
-}
-@media print {
-  html {
-    font-size: 80%;
+    max-width: 60vw;
   }
 }
 /* Media query for small tablets */
 @media handheld, only screen and (max-width: 40rem), only screen and (max-device-width: 40rem) and (orientation: portrait) {
   html {
-    font-size: 80%;
+    font-size: 1.66vw;
   }
   .l_row {
     margin-bottom: 0!important;
@@ -1881,7 +1885,7 @@ ul.ul_no-bullet li ul {
   }
   article.l_row img {
     max-height: 80vh;
-    max-width: 60vw;
+    max-width: 80vw;
   }
 }
 /*# sourceMappingURL=main_ivory.css.map */
